@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+"<div className=\\"App\\">
+  <header className=\\"App-header\\">
+    <Button handleClick={[Function: handleClick]}>
+      <p>
+        Button
+      </p>
+    </Button>
+    <Button handleClick={[Function: handleClick]} notice=\\"success\\">
+      <p>
+        Button
+      </p>
+    </Button>
+    <Button handleClick={[Function: handleClick]} notice=\\"info\\">
+      <p>
+        Button
+      </p>
+    </Button>
+    <Button handleClick={[Function: handleClick]} notice=\\"error\\">
+      <p>
+        Button
+      </p>
+    </Button>
+    <Button handleClick={[Function: handleClick]} notice=\\"disabled\\">
+      <p>
+        Button
+      </p>
+    </Button>
+  </header>
+</div>"
+`;
