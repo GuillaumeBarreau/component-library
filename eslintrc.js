@@ -25,8 +25,11 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
+  ignorePatterns: ["./dist/*"],
   rules: {
     'linebreak-style': 'off',
+    'import/no-anonymous-default-export': 'off',
+    "max-len": ["warn", { "code": 80 }],
     'prettier/prettier': [
       'error',
       {

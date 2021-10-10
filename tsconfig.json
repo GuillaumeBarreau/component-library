@@ -5,6 +5,7 @@
       "es6",
       "dom"
     ],
+    "baseUrl": "src",
     "rootDir": "src",
     "module": "esnext",
     "target": "es5",
@@ -26,9 +27,14 @@
     "noEmit": true
   },
   "include": [
-    "./src"
+    "src"
   ],
-  "extensions": [".ts" ,".tsx", ".js", ".jsx"],    
+  "extensions": [
+    ".ts",
+    ".tsx",
+    ".js",
+    ".jsx"
+  ],
   "exclude": [
     "node_modules",
     "build",
