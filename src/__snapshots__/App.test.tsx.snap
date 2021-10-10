@@ -3,31 +3,40 @@
 exports[`renders correctly 1`] = `
 "<div className=\\"App\\">
   <header className=\\"App-header\\">
-    <Button handleClick={[Function: handleClick]}>
-      <p>
-        Button
-      </p>
-    </Button>
-    <Button handleClick={[Function: handleClick]} notice=\\"success\\">
-      <p>
-        Button
-      </p>
-    </Button>
-    <Button handleClick={[Function: handleClick]} notice=\\"info\\">
-      <p>
-        Button
-      </p>
-    </Button>
-    <Button handleClick={[Function: handleClick]} notice=\\"error\\">
-      <p>
-        Button
-      </p>
-    </Button>
-    <Button handleClick={[Function: handleClick]} notice=\\"disabled\\">
-      <p>
-        Button
-      </p>
-    </Button>
+    <section className=\\"App-section--container\\">
+      <Button handleClick={[Function: handleClick]}>
+        default
+      </Button>
+      <Button handleClick={[Function: handleClick]} notice=\\"success\\">
+        success
+      </Button>
+      <Button handleClick={[Function: handleClick]} notice=\\"info\\">
+        info
+      </Button>
+      <Button handleClick={[Function: handleClick]} notice=\\"warning\\">
+        warning
+      </Button>
+      <Button handleClick={[Function: handleClick]} notice=\\"error\\">
+        error
+      </Button>
+      <Button handleClick={[Function: handleClick]} notice=\\"disabled\\">
+        disabled
+      </Button>
+    </section>
+    <section className=\\"App-section--container\\">
+      <Question>
+        Molecules.Question
+      </Question>
+      <Answer handleClick={[Function: handleClick]}>
+        Molecules.Answer
+      </Answer>
+    </section>
+    <section className=\\"App-section--container\\">
+      <Input handleOnChange={[Function: handleOnChange]} placeholder=\\"login\\" value=\\"\\" />
+      <Button handleClick={[Function: buttonEventClick]} notice=\\"disabled\\">
+        disabled
+      </Button>
+    </section>
   </header>
 </div>"
 `;

@@ -3,6 +3,10 @@ module.exports = {
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
+  "reactOptions": {
+    "fastRefresh": true,
+    "strictMode": true,
+  },
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
