@@ -1,8 +1,7 @@
 import React from "react";
-import {Button} from "./button";
+import { Button } from "./button";
 import { Meta } from "@storybook/react/types-6-0";
 import { ComponentButtonProps } from "./button.d";
-import "../../_settings/colors/colors.css";
 
 export default {
   component: Button,
@@ -40,11 +39,13 @@ export default {
 
 const Template: any = (
   args: JSX.IntrinsicAttributes & ComponentButtonProps
-) => <>
-  <section style={{display: "flex", justifyContent: "center"}}>
-    <Button {...args} />
-  </section>
-</>;
+) => (
+  <>
+    <section style={{ display: "flex", justifyContent: "center" }}>
+      <Button {...args} />
+    </section>
+  </>
+);
 
 export const ButtonDefault = Template.bind({});
 ButtonDefault.args = {

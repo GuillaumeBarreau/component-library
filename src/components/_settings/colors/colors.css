@@ -1,34 +1,41 @@
 :root {
-    --color-base-01: #181820;
-    --color-base-01--dark: #000000;
-    --color-base-01--light: #2e2e3b;
+  --color-base-01: #202028;
+  --color-base-01--dark: #000000;
+  --color-base-01--light: #3c3c47;
 
-    --color-base-02: #d6dad9;
-    --color-base-02--dark: #afafaf;
-    --color-base-02--light: #fafafa;
+  --color-base-02: #d6dad9;
+  --color-base-02--dark: #afafaf;
+  --color-base-02--light: #fafafa;
+  --color-base-02--light-shadow: rgba(250, 250, 250, 0.4);
 
-    --color-neon-01: #625bf1;
-    --color-neon-01--dark: #413c9e;
-    --color-neon-01--light: #938dff;
+  --color-text--dark: #587193;
+  --color-text--light: #253c5b;
 
-    --color-neon-02: #4deeea;
-    --color-neon-02--dark: #3bb6b4;
-    --color-neon-02--light: #80fffd;
+  --color-notice-default: #fafafa;
+  --color-notice-default--background: #fafafa;
+  --color-notice-default--text: #253c5b;
 
-    --color-neon-03: #f000ff;
-    --color-neon-03--dark: #af01bb;
-    --color-neon-03--light: #f569ff;
+  --color-notice-success--light: rgba(35, 165, 122, 0.4);
+  --color-notice-success--default: #23a57a;
+  --color-notice-success--text: #fafafa;
+  --color-notice-success--dark: #0f6246;
+  --color-notice-success--background: #23a57a;
 
-    --color-neon-04: #74ee15;
-    --color-neon-04--dark: #57b112;
-    --color-neon-04--light: #adff6e;
+  --color-notice-warning--light: rgba(255, 170, 85, 0.4);
+  --color-notice-warning--default: #ffaa55;
+  --color-notice-warning--text: #fafafa;
+  --color-notice-warning--dark: #814a13;
+  --color-notice-warning--background: #ffaa55;
 
-    --color-neon-05: #fdc019;
-    --color-neon-05--dark: #c39412;
-    --color-neon-05--light: #ffcf4d;
+  --color-notice-error--light: rgba(222, 51, 68, 0.4);
+  --color-notice-error--default: #de3345;
+  --color-notice-error--text: #fafafa;
+  --color-notice-error--dark: #81131d;
+  --color-notice-error--background: #de3345;
 
-    --color-notice-success: #40b86a;
-    --color-notice-warning: #e28418;
-    --color-notice-error: #c03254;
-    --color-notice-info: #2776c0;
+  --color-notice-info--light: rgba(23, 96, 179, 0.4);
+  --color-notice-info--default: #1760b3;
+  --color-notice-info--text: #fafafa;
+  --color-notice-info--dark: #134681;
+  --color-notice-info--background: #1760b3;
 }

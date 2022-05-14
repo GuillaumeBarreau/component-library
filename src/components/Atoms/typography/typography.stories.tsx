@@ -1,8 +1,7 @@
 import React from "react";
-import {Typography} from "./typography";
+import { Typography } from "./typography";
 import { Meta } from "@storybook/react/types-6-0";
 import { ComponentTypographyProps, TSizes } from "./typography.d";
-import "../../_settings/colors/colors.css";
 
 export default {
   component: Typography,
@@ -26,15 +25,17 @@ export default {
   },
 } as Meta;
 
-const sizes:TSizes[] = ["xsmall", "small", "medium", "large", "xlarge"];
+const sizes: TSizes[] = ["xsmall", "small", "medium", "large", "xlarge"];
 
 const ListTemplate: any = (args: Partial<ComponentTypographyProps>) => (
   <>
-    {sizes.map((size:TSizes, index) => (
+    {sizes.map((size: TSizes, index) => (
       <div key={size}>
         {index !== 0 ? <hr></hr> : null}
         <Typography size={"small"}>{size}</Typography>
-        <Typography size={size} font={args.font}>{args.children}</Typography>
+        <Typography size={size} font={args.font}>
+          {args.children}
+        </Typography>
       </div>
     ))}
   </>

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Should match with Snapshot correctly 1`] = `
+"<div className=\\"badge badge--notice-default overide-class\\">
+  <Typography font=\\"bold\\" size=\\"default\\" variant=\\"p\\" className=\\"badge--overide-typography\\">
+    Badge
+  </Typography>
+</div>"
+`;

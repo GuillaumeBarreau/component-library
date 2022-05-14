@@ -1,4 +1,11 @@
-export type TSizes = "xsmall" | "small" | "medium" | "large" | "xlarge";
+export type TSizes =
+  | "xsmall"
+  | "small"
+  | "medium"
+  | "large"
+  | "xlarge"
+  | "default";
+
 export type TVariants =
   | "h1"
   | "h2"
@@ -7,6 +14,7 @@ export type TVariants =
   | "h5"
   | "h6"
   | "p"
+  | "span"
   | undefined;
 
 export interface ComponentTypographyProps {
