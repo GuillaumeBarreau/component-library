@@ -9,7 +9,9 @@ export const Input: React.FC<ComponentInputProps> = (props) => {
     handleOnChange,
     placeholder,
     type = "text",
-    value
+    namedInput,
+    labelDescription,
+    value,
   } = props;
   const prefixCls: string = "input";
 
@@ -22,13 +24,17 @@ export const Input: React.FC<ComponentInputProps> = (props) => {
   );
 
   const inputNode = (
-    <input 
-        className={classes} 
+    <>
+      <label htmlFor={namedInput}>{labelDescription}</label>
+      <input
+        id={namedInput}
+        className={classes}
         onChange={handleOnChange}
         type={type}
         placeholder={placeholder}
         value={value}
       />
+    </>
   );
 
   return inputNode;

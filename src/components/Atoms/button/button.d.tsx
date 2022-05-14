@@ -1,9 +1,13 @@
+import { TiconName } from "components/_settings/globalTypes/Types.d";
+
 export interface ComponentButtonProps {
   className?: string;
   handleClick: React.MouseEventHandler<HTMLButtonElement>;
-  iconName?: string;
+  iconName?: TiconName;
   type?: string;
-  variant?: "contained" | "outlaned"  | "default"
+  isBlock?: boolean;
+  variant?: "contained" | "outlaned" | "default";
+  size?: "xsmall" | "small" | "medium";
   notice?:
     | "success"
     | "info"

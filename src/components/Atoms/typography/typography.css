@@ -1,72 +1,80 @@
 /* Typography */
 @font-face {
-   font-family: 'lato';
-   src: local('lato'), url(../../_settings/fonts/Lato/Lato-Regular.ttf) format('truetype');
+  font-family: "lato";
+  src: local("lato"),
+    url(../../_settings/fonts/Lato/Lato-Regular.ttf) format("truetype");
 }
 
 @font-face {
-   font-family: 'lato-bold';
-   src: local('bato-bold'), url(../../_settings/fonts/Lato/Lato-Bold.ttf) format('truetype');
+  font-family: "lato-bold";
+  src: local("bato-bold"),
+    url(../../_settings/fonts/Lato/Lato-Bold.ttf) format("truetype");
 }
 
 @font-face {
-   font-family: 'lato-italic';
-   src: local('bato-italic'), url(../../_settings/fonts/Lato/Lato-Italic.ttf) format('truetype');
+  font-family: "lato-italic";
+  src: local("bato-italic"),
+    url(../../_settings/fonts/Lato/Lato-Italic.ttf) format("truetype");
 }
 
 @font-face {
-   font-family: 'lato-black';
-   src: local('bato-black'), url(../../_settings/fonts/Lato/Lato-Black.ttf) format('truetype');
+  font-family: "lato-black";
+  src: local("bato-black"),
+    url(../../_settings/fonts/Lato/Lato-Black.ttf) format("truetype");
 }
 
 @font-face {
-   font-family: 'lato-light';
-   src: local('bato-light'), url(../../_settings/fonts/Lato/Lato-Light.ttf) format('truetype');
+  font-family: "lato-light";
+  src: local("bato-light"),
+    url(../../_settings/fonts/Lato/Lato-Light.ttf) format("truetype");
 }
 
 @font-face {
-   font-family: 'lato-thin';
-   src: local('bato-thin'), url(../../_settings/fonts/Lato/Lato-Thin.ttf) format('truetype');
+  font-family: "lato-thin";
+  src: local("bato-thin"),
+    url(../../_settings/fonts/Lato/Lato-Thin.ttf) format("truetype");
 }
 
 .typography {
-   font-family: lato, Arial, serif;
+  font-family: lato, Arial, serif;
 }
 
 .typography-bold {
-   font-family: lato-black, Arial, serif;
+  font-family: lato-black, Arial, serif;
 }
 
 .typography-italic {
-   font-family: lato-italic, Arial, serif;
+  font-family: lato-italic, Arial, serif;
 }
 
 .typography-black {
-   font-family: lato-black, Arial, serif;
+  font-family: lato-black, Arial, serif;
 }
 
 .typography-light {
-   font-family: lato-light, Arial, serif;
+  font-family: lato-light, Arial, serif;
 }
 
 .typography-xsmall {
-   font-size: 12px;
+  font-size: 12px;
 }
 
 .typography-small {
-   font-size: 16px;
+  font-size: 16px;
+}
+
+.typography-default {
+  font-size: 18px;
 }
 
 .typography-medium {
-   font-size: 20px;
+  font-size: 20px;
 }
 
 .typography-large {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .typography-xlarge {
-    font-size: 32px;
+  font-size: 32px;
 }
-
- 

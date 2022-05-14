@@ -1,0 +1,41 @@
+:root {
+  --color-base-01: #131315;
+  --color-base-01--dark: #000000;
+  --color-base-01--light: #2d2d39;
+
+  --color-base-02: #d6dad9;
+  --color-base-02--dark: #afafaf;
+  --color-base-02--light: #fafafa;
+  --color-base-02--light-shadow: rgba(250, 250, 250, 0.4);
+
+  --color-text--dark: #587193;
+  --color-text--light: #253c5b;
+
+  --color-notice-default: #fafafa;
+  --color-notice-default--background: transparent;
+  --color-notice-default--text: #fafafa;
+
+  --color-notice-success--light: rgba(72, 175, 28, 0.4);
+  --color-notice-success--default: #48af1c;
+  --color-notice-success--text: #48af1c;
+  --color-notice-success--dark: #0f6246;
+  --color-notice-success--background: transparent;
+
+  --color-notice-warning--light: rgba(255, 178, 25, 0.4);
+  --color-notice-warning--default: #ffb219;
+  --color-notice-warning--text: #ffb219;
+  --color-notice-warning--dark: #814a13;
+  --color-notice-warning--background: transparent;
+
+  --color-notice-error--light: rgba(255, 0, 221, 0.4);
+  --color-notice-error--default: #ff00dc;
+  --color-notice-error--text: #ff00dc;
+  --color-notice-error--dark: #81131d;
+  --color-notice-error--background: transparent;
+
+  --color-notice-info--light: rgba(1, 187, 255, 0.4);
+  --color-notice-info--default: #01bdff;
+  --color-notice-info--text: #01bdff;
+  --color-notice-info--dark: #134681;
+  --color-notice-info--background: transparent;
+}

@@ -4,35 +4,274 @@ exports[`renders correctly 1`] = `
 "<div className=\\"App\\">
   <header className=\\"App-header\\">
     <section className=\\"App-section--container\\">
-      <Button handleClick={[Function: handleClick]}>
-        default
-      </Button>
-      <Button handleClick={[Function: handleClick]} notice=\\"success\\">
-        success
-      </Button>
-      <Button handleClick={[Function: handleClick]} notice=\\"info\\">
-        info
-      </Button>
-      <Button handleClick={[Function: handleClick]} notice=\\"warning\\">
-        warning
-      </Button>
-      <Button handleClick={[Function: handleClick]} notice=\\"error\\">
-        error
-      </Button>
-      <Button handleClick={[Function: handleClick]} notice=\\"disabled\\">
-        disabled
-      </Button>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} size=\\"xsmall\\">
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" size=\\"xsmall\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" size=\\"xsmall\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" size=\\"xsmall\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" size=\\"xsmall\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" size=\\"xsmall\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} size=\\"small\\">
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" size=\\"small\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" size=\\"small\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" size=\\"small\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" size=\\"small\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" size=\\"small\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]}>
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} size=\\"medium\\">
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" size=\\"medium\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" size=\\"medium\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" size=\\"medium\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" size=\\"medium\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" size=\\"medium\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} isBlock={true}>
+          default Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" isBlock={true}>
+          success Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" isBlock={true}>
+          info Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" isBlock={true}>
+          warning Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" isBlock={true}>
+          error Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" isBlock={true}>
+          disabled Block
+        </Button>
+      </div>
     </section>
     <section className=\\"App-section--container\\">
-      <Question>
-        Molecules.Question
-      </Question>
-      <Answer handleClick={[Function: handleClick]}>
-        Molecules.Answer
-      </Answer>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} size=\\"xsmall\\" iconName=\\"fa-coffee\\">
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" size=\\"xsmall\\" iconName=\\"fa-coffee\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" size=\\"xsmall\\" iconName=\\"fa-coffee\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" size=\\"xsmall\\" iconName=\\"fa-coffee\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" size=\\"xsmall\\" iconName=\\"fa-coffee\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" size=\\"xsmall\\" iconName=\\"fa-coffee\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} size=\\"small\\" iconName=\\"fa-coffee\\">
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" size=\\"small\\" iconName=\\"fa-coffee\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" size=\\"small\\" iconName=\\"fa-coffee\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" size=\\"small\\" iconName=\\"fa-coffee\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" size=\\"small\\" iconName=\\"fa-coffee\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" size=\\"small\\" iconName=\\"fa-coffee\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} iconName=\\"fa-coffee\\">
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" iconName=\\"fa-coffee\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" iconName=\\"fa-coffee\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" iconName=\\"fa-coffee\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" iconName=\\"fa-coffee\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" iconName=\\"fa-coffee\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} size=\\"medium\\" iconName=\\"fa-coffee\\">
+          default
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" size=\\"medium\\" iconName=\\"fa-coffee\\">
+          success
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" size=\\"medium\\" iconName=\\"fa-coffee\\">
+          info
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" size=\\"medium\\" iconName=\\"fa-coffee\\">
+          warning
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" size=\\"medium\\" iconName=\\"fa-coffee\\">
+          error
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" size=\\"medium\\" iconName=\\"fa-coffee\\">
+          disabled
+        </Button>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Button handleClick={[Function: handleClick]} isBlock={true} iconName=\\"fa-coffee\\">
+          default Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"success\\" isBlock={true} iconName=\\"fa-coffee\\">
+          success Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"info\\" isBlock={true} iconName=\\"fa-coffee\\">
+          info Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"warning\\" isBlock={true} iconName=\\"fa-coffee\\">
+          warning Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"error\\" isBlock={true} iconName=\\"fa-coffee\\">
+          error Block
+        </Button>
+        <Button handleClick={[Function: handleClick]} notice=\\"disabled\\" isBlock={true} iconName=\\"fa-coffee\\">
+          disabled Block
+        </Button>
+      </div>
     </section>
     <section className=\\"App-section--container\\">
-      <Input handleOnChange={[Function: handleOnChange]} placeholder=\\"login\\" value=\\"\\" />
+      <div className=\\"App-section--container__content\\">
+        <Badge size=\\"xsmall\\">
+          default
+        </Badge>
+        <Badge notice=\\"success\\" size=\\"xsmall\\">
+          success
+        </Badge>
+        <Badge notice=\\"info\\" size=\\"xsmall\\">
+          info
+        </Badge>
+        <Badge notice=\\"warning\\" size=\\"xsmall\\">
+          warning
+        </Badge>
+        <Badge notice=\\"error\\" size=\\"xsmall\\">
+          error
+        </Badge>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Badge size=\\"small\\">
+          default
+        </Badge>
+        <Badge notice=\\"success\\" size=\\"small\\">
+          success
+        </Badge>
+        <Badge notice=\\"info\\" size=\\"small\\">
+          info
+        </Badge>
+        <Badge notice=\\"warning\\" size=\\"small\\">
+          warning
+        </Badge>
+        <Badge notice=\\"error\\" size=\\"small\\">
+          error
+        </Badge>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Badge>
+          default
+        </Badge>
+        <Badge notice=\\"success\\">
+          success
+        </Badge>
+        <Badge notice=\\"info\\">
+          info
+        </Badge>
+        <Badge notice=\\"warning\\">
+          warning
+        </Badge>
+        <Badge notice=\\"error\\">
+          error
+        </Badge>
+      </div>
+    </section>
+    <section className=\\"App-section--container\\">
+      <div className=\\"App-section--container__content\\">
+        <Question>
+          Molecules.Question
+        </Question>
+        <Answer handleClick={[Function: handleClick]}>
+          Molecules.Answer
+        </Answer>
+      </div>
+    </section>
+    <section className=\\"App-section--container\\">
+      <Input handleOnChange={[Function: handleOnChange]} placeholder=\\"login\\" namedInput=\\"login\\" labelDescription=\\"login\\" value=\\"\\" />
       <Button handleClick={[Function: buttonEventClick]} notice=\\"disabled\\">
         disabled
       </Button>

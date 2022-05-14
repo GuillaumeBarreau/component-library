@@ -9,6 +9,8 @@ describe("Input", () => {
   beforeEach(() => {
     defaultProps = {
       className: "",
+      labelDescription: "label description",
+      namedInput: "namedInput",
       handleOnChange: jest.fn(),
       type: "text",
       placeholder: "Login",
@@ -26,10 +28,26 @@ describe("Input", () => {
     expect(() => wrapper).not.toThrow();
   });
 
-  it("to contain defaultProps:placeholder correctly", () => {
+  it("Should contain defaultProps:placeholder correctly", () => {
     const wrapper = shallow(<Input {...defaultProps} />);
     expect(() => wrapper).not.toThrow();
     expect(wrapper.html()).toContain("Login");
+  });
+
+  it('Should contain defaultProps:labelDescription correctly', () => {
+    const wrapper = shallow(
+      <Input {...defaultProps} />
+    );
+    expect(() => wrapper).not.toThrow();
+    expect(wrapper.html()).toContain('label description');
+  });
+
+  it('Should contain defaultProps:namedInput correctly', () => {
+    const wrapper = shallow(
+      <Input {...defaultProps} />
+    );
+    expect(() => wrapper).not.toThrow();
+    expect(wrapper.html()).toContain('label description');
   });
 
 });

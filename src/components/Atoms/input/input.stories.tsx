@@ -1,14 +1,21 @@
 import React from "react";
-import {Input} from "./input";
+import { Input } from "./input";
 import { Meta } from "@storybook/react/types-6-0";
 import { ComponentInputProps } from "./input.d";
-import "../../_settings/colors/colors.css";
 
 export default {
   component: Input,
   title: "Input",
   argTypes: {
     className: {
+      description: "className content",
+      control: "text",
+    },
+    namedInput: {
+      description: "className content",
+      control: "text",
+    },
+    labelDescription: {
       description: "className content",
       control: "text",
     },
@@ -23,13 +30,13 @@ export default {
   },
 } as Meta;
 
-const Template: any = (
-  args: JSX.IntrinsicAttributes & ComponentInputProps
-) => <>
-  <section style={{display: "flex", justifyContent: "center"}}>
-    <Input {...args} />
-  </section>
-</>;
+const Template: any = (args: JSX.IntrinsicAttributes & ComponentInputProps) => (
+  <>
+    <section style={{ display: "flex", justifyContent: "center" }}>
+      <Input {...args} />
+    </section>
+  </>
+);
 
 export const InputDefault = Template.bind({});
 InputDefault.args = {
