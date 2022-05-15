@@ -14,6 +14,8 @@ export interface ComponentButtonProps {
     | "warning"
     | "error"
     | "disabled"
+    | "primary"
+    | "secondary"
     | "default"
     | undefined;
   children: string;

@@ -45,6 +45,47 @@
   box-shadow: 0px 0.375rem 0px 0px var(--color-base-02--light-shadow);
 }
 
+.button--notice-primary {
+  border: none;
+  color: white;
+  background: linear-gradient(
+    var(--color-brand-primary--light),
+    var(--color-brand-primary--dark)
+  );
+  -o-border-image: linear-gradient(
+      to right,
+      var(--color-brand-primary--light),
+      var(--color-brand-primary--dark)
+    )
+    1;
+  border-image: linear-gradient(
+      to right,
+      var(--color-brand-primary--light),
+      var(--color-brand-primary--dark)
+    )
+    1;
+}
+
+.button--notice-secondary {
+  border: none;
+  background: linear-gradient(
+    var(--color-brand-secondary--light),
+    var(--color-brand-secondary--dark)
+  );
+  -o-border-image: linear-gradient(
+      to right,
+      var(--color-brand-secondary--light),
+      var(--color-brand-secondary--dark)
+    )
+    1;
+  border-image: linear-gradient(
+      to right,
+      var(--color-brand-secondary--light),
+      var(--color-brand-secondary--dark)
+    )
+    1;
+}
+
 .button--notice-default:hover {
   background: var(--color-base-02--light);
   color: var(--color-text--light);

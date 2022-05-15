@@ -39,6 +39,25 @@ function App() {
       <header className="App-header">
         <section className="App-section--container">
           <div className="App-section--container__content">
+            <Atoms.Button
+              notice="primary"
+              handleClick={() => console.log("here")}
+              size="small"
+            >
+              default
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="secondary"
+              size="small"
+            >
+              success
+            </Atoms.Button>
+          </div>
+        </section>
+
+        <section className="App-section--container">
+          <div className="App-section--container__content">
             <Atoms.Button handleClick={() => console.log("here")} size="xsmall">
               default
             </Atoms.Button>
@@ -605,15 +624,6 @@ function App() {
             <Atoms.Badge iconName="circle-exclamation" notice="error">
               error
             </Atoms.Badge>
-          </div>
-        </section>
-
-        <section className="App-section--container">
-          <div className="App-section--container__content">
-            <Molecules.Question>Molecules.Question</Molecules.Question>
-            <Molecules.Answer handleClick={() => null}>
-              Molecules.Answer
-            </Molecules.Answer>
           </div>
         </section>
 

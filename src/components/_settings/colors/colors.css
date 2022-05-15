@@ -11,6 +11,11 @@
   --color-text--dark: #587193;
   --color-text--light: #253c5b;
 
+  --color-brand-primary--light: #2b8db8;
+  --color-brand-primary--dark: #01577d;
+  --color-brand-secondary--light: #f1cc52;
+  --color-brand-secondary--dark: #f2ae27;
+
   --color-notice-default: #fafafa;
   --color-notice-default--background: #fafafa;
   --color-notice-default--text: #253c5b;
