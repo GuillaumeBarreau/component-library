@@ -213,6 +213,8 @@ function App() {
             </Atoms.Button>
           </div>
 
+          <br />
+
           <div className="App-section--container__content">
             <Atoms.Button handleClick={() => console.log("here")} isBlock>
               default Block
@@ -450,6 +452,8 @@ function App() {
             </Atoms.Button>
           </div>
 
+          <br />
+
           <div className="App-section--container__content">
             <Atoms.Button
               handleClick={() => console.log("here")}
@@ -542,6 +546,8 @@ function App() {
             <Atoms.Badge notice="error">error</Atoms.Badge>
           </div>
 
+          <br />
+
           <div className="App-section--container__content">
             <Atoms.Badge iconName="circle-exclamation" size="xsmall">
               default
@@ -624,6 +630,107 @@ function App() {
             <Atoms.Badge iconName="circle-exclamation" notice="error">
               error
             </Atoms.Badge>
+          </div>
+        </section>
+
+        <section className="App-section--container">
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={100}
+              notice="primary"
+            />
+          </div>
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={100}
+              notice="secondary"
+            />
+          </div>
+
+          <br />
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={25}
+              notice="info"
+            />
+          </div>
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={50}
+              notice="success"
+            />
+          </div>
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={75}
+              className="progressBar"
+              notice="error"
+            />
+          </div>
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={100}
+              className="progressBar"
+              notice="warning"
+            />
+          </div>
+
+          <br />
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={25}
+              size="small"
+              notice="primary"
+            />
+          </div>
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={50}
+              size="xsmall"
+              notice="secondary"
+            />
+          </div>
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={75}
+              notice="primary"
+            />
+          </div>
+
+          <div className="App-section--container__content">
+            <Atoms.ProgressBar
+              progessMax={100}
+              progessMin={1}
+              progress={100}
+              size="medium"
+              notice="secondary"
+            />
           </div>
         </section>
 

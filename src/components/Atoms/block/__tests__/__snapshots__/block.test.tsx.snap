@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Block renders correctly 1`] = `
-"<Component className=\\"block\\">
+"<div className=\\"block\\">
   Block
-</Component>"
+</div>"
 `;

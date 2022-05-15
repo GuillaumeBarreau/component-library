@@ -49,19 +49,19 @@
   border: none;
   color: white;
   background: linear-gradient(
-    var(--color-brand-primary--light),
-    var(--color-brand-primary--dark)
+    var(--color-notice-primary--default),
+    var(--color-notice-primary--dark)
   );
   -o-border-image: linear-gradient(
       to right,
-      var(--color-brand-primary--light),
-      var(--color-brand-primary--dark)
+      var(--color-notice-primary--default),
+      var(--color-notice-primary--dark)
     )
     1;
   border-image: linear-gradient(
       to right,
-      var(--color-brand-primary--light),
-      var(--color-brand-primary--dark)
+      var(--color-notice-primary--default),
+      var(--color-notice-primary--dark)
     )
     1;
 }
@@ -69,19 +69,19 @@
 .button--notice-secondary {
   border: none;
   background: linear-gradient(
-    var(--color-brand-secondary--light),
-    var(--color-brand-secondary--dark)
+    var(--color-notice-secondary--default),
+    var(--color-notice-secondary--dark)
   );
   -o-border-image: linear-gradient(
       to right,
-      var(--color-brand-secondary--light),
-      var(--color-brand-secondary--dark)
+      var(--color-notice-secondary--default),
+      var(--color-notice-secondary--dark)
     )
     1;
   border-image: linear-gradient(
       to right,
-      var(--color-brand-secondary--light),
-      var(--color-brand-secondary--dark)
+      var(--color-notice-secondary--default),
+      var(--color-notice-secondary--dark)
     )
     1;
 }

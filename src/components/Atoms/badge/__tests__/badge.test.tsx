@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { Badge } from "../badge";
 import { ComponentBadgeProps } from "../badge.d";
 
@@ -46,7 +46,7 @@ describe("Badge", () => {
       ...defaultProps,
       size: "small",
     };
-    const wrapper = shallow(<Badge {...props} />);
+    const wrapper = mount(<Badge {...props} />);
     expect(wrapper.find(".typography-small")).toHaveLength(1);
   });
 

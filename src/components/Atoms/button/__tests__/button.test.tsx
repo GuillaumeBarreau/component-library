@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { Button } from "../button";
 import { ComponentButtonProps } from "../button.d";
 
@@ -8,10 +8,10 @@ describe("Button", () => {
 
   beforeEach(() => {
     defaultProps = {
-      className: "",
+      className: "button",
       handleClick: jest.fn(),
       notice: "default",
-      iconName: "coffee",
+      iconName: "check-square",
       isBlock: false,
       type: "",
       children: "Button",
@@ -35,19 +35,14 @@ describe("Button", () => {
   });
 
   it("Should contain defaultProps:status correctly", () => {
-    const wrapper = shallow(<Button {...defaultProps} />);
+    const wrapper = mount(<Button {...defaultProps} />);
     expect(() => wrapper).not.toThrow();
-    expect(wrapper.html()).toContain("button-default");
+    expect(wrapper.html()).toContain("button--default");
   });
 
   it("Should contain defaultProps:Notice with following value disabled correctly", () => {
     const wrapper = shallow(<Button {...defaultProps} notice="disabled" />);
     expect(wrapper.html()).toContain("disabled");
-  });
-
-  it("Should showing element svg correctly if defaultProps:iconName contain a value", () => {
-    const wrapper = shallow(<Button {...defaultProps} />);
-    expect(wrapper.html()).toContain("svg");
   });
 
   it("Event click should be called one time", () => {
