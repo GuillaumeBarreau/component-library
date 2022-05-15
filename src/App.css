@@ -5,19 +5,18 @@
 .App-section--container {
   display: flex;
   min-height: 100vh;
-  width: cal(100% - 4rem);
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
 }
 
 .App-section--container__content {
   display: flex;
   flex-flow: wrap;
-  width: 100%;
   justify-content: center;
-  margin: 1rem;
+  margin: 0.5rem;
+  width: 80%;
 }
 
 .App-header {

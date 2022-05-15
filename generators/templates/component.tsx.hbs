@@ -1,12 +1,17 @@
 import React from "react";
-// import classNames from "classnames";
+import classNames from "classnames";
 import { Component{{pascalCase name}}Props } from "./{{name}}.d";
 import "./{{name}}.css";
 
 export const {{pascalCase name}}: React.FC<Component{{pascalCase name}}Props> = (props) => {
 
+  const { children, className } = props;
+
+  const prefixCls: string = "{{pascalCase name}}";
+  const classes = classNames(prefixCls, {}, className);
+
   return (
-    <div>
+    <div className={classes}>
       {{pascalCase name }} component
     </div>
   );
