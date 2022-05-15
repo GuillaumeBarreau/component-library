@@ -11,10 +11,12 @@
   --color-text--dark: #587193;
   --color-text--light: #253c5b;
 
-  --color-brand-primary--light: #2b8db8;
-  --color-brand-primary--dark: #01577d;
-  --color-brand-secondary--light: #f1cc52;
-  --color-brand-secondary--dark: #f2ae27;
+  --color-notice-primary--light: rgba(14, 101, 138, 0.4);
+  --color-notice-primary--default: #0e658a;
+  --color-notice-primary--dark: #09445d;
+  --color-notice-secondary--light: rgba(243, 197, 47, 0.4);
+  --color-notice-secondary--default: #f3c52f;
+  --color-notice-secondary--dark: #e79510;
 
   --color-notice-default: #fafafa;
   --color-notice-default--background: #fafafa;

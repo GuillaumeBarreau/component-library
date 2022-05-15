@@ -22,27 +22,27 @@ module.exports = (plop) => {
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase type}}/{{name}}/{{lowerCase name}}.tsx",
+        path: "../src/components/{{pascalCase type}}/{{name}}/{{name}}.tsx",
         templateFile: "templates/component.tsx.hbs",
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase type}}/{{name}}/{{lowerCase name}}.css",
+        path: "../src/components/{{pascalCase type}}/{{name}}/{{name}}.css",
         templateFile: "templates/component.css.hbs",
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase type}}/{{name}}/{{lowerCase name}}.stories.tsx",
+        path: "../src/components/{{pascalCase type}}/{{name}}/{{name}}.stories.tsx",
         templateFile: "templates/component-stories.tsx.hbs",
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase type}}/{{name}}/{{lowerCase name}}.d.tsx",
+        path: "../src/components/{{pascalCase type}}/{{name}}/{{name}}.d.tsx",
         templateFile: "templates/component.d.tsx.hbs",
       },
       {
         type: "add",
-        path: "../src/components/{{pascalCase type}}/{{name}}/__tests__/{{lowerCase name}}.test.tsx",
+        path: "../src/components/{{pascalCase type}}/{{name}}/__tests__/{{name}}.test.tsx",
         templateFile: "templates/component.test.tsx.hbs",
       },
       {

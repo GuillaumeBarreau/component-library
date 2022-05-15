@@ -11,27 +11,24 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
-    "@storybook/addon-a11y": "^6.3.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^13.1.9",
     "@types/node": "^15.12.4",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "check-peer-dependencies": "^4.0.0",
     "classnames": "^2.3.1",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^8.3.5",
     "rc-motion": "^2.4.4",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.0.0",
     "react-dom": "^17.0.2 ",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "react-test-renderer": "^17.0.2",
-    "storybook-addon-react-docgen": "^1.2.42",
-    "styled-components": "^5.3.5",
     "typescript": "^4.3.4",
     "web-vitals": "^2.0.1"
   },
@@ -46,8 +43,6 @@
     "start-playground": "cd playground && npm run start",
     "i-all": "npm i && cd playground && npm i",
     "dev": "npm-run-all --parallel build-watch start-playground",
-    "storybook": "NODE_PATH=src start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
     "prettier:check": "prettier --check src/**/*.ts{,x}",
     "prettier:fix": "prettier --write src/**/*.ts{,x}",
     "eslint:check": "tsc --noEmit && eslint src/**/*.ts{,x}",
@@ -56,11 +51,10 @@
     "CPD": "npx check-peer-dependencies",
     "generate": "plop --plopfile generators/plopfile.js"
   },
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
     "overrides": [
       {
         "files": [
@@ -92,16 +86,10 @@
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
-    "@storybook/addon-actions": "^6.3.0",
-    "@storybook/addon-controls": "^6.3.0",
-    "@storybook/addon-essentials": "^6.3.0",
-    "@storybook/addon-links": "^6.3.0",
-    "@storybook/node-logger": "^6.3.0",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.3.0",
     "@types/enzyme": "^3.10.8",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.23",
+    "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "eslint": "^7.29.0",
