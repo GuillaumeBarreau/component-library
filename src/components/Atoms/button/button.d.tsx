@@ -4,10 +4,9 @@ export interface ComponentButtonProps {
   className?: string;
   handleClick: React.MouseEventHandler<HTMLButtonElement>;
   iconName?: TiconName;
-  type?: string;
   isBlock?: boolean;
-  variant?: "contained" | "outlaned" | "default";
-  size?: "xsmall" | "small" | "medium";
+  variant?: "outlined" | "text";
+  size?: "xsmall" | "small" | "medium" | "default";
   notice?:
     | "success"
     | "info"
@@ -18,5 +17,5 @@ export interface ComponentButtonProps {
     | "secondary"
     | "default"
     | undefined;
-  children: string;
+  children?: string;
 }

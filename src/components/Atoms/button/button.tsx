@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { ComponentButtonProps } from "./button.d";
 import "./button.css";
 import { Typography } from "components/Atoms/typography";
+import { Icon } from "components/Atoms/icon";
 
 export const Button: React.FC<ComponentButtonProps> = (props) => {
   const {
@@ -11,15 +12,16 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
     handleClick,
     children,
     iconName,
-    type,
-    size,
+    size = "default",
     isBlock,
-    variant = "default",
+    variant,
     notice = "default",
   } = props;
 
   const iconNode: JSX.Element | null = iconName ? (
-    <FontAwesomeIcon icon={iconName} size={"lg"} />
+    <Icon icon={iconName} size={"lg"} />
+  ) : !children && !iconName ? (
+    <Icon icon={"bug"} size={"xs"} />
   ) : null;
 
   const prefixCls: string = "button";
@@ -27,11 +29,10 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
   const classes = classNames(
     prefixCls,
     {
-      [`${prefixCls}-${type}`]: type,
       [`${prefixCls}--notice-${notice}`]: notice,
       [`${prefixCls}--size-${size}`]: size,
       [`${prefixCls}--block`]: isBlock,
-      [`${prefixCls}--${notice}--variant-${variant}`]: variant,
+      [`${prefixCls}--variant-${variant}`]: variant,
     },
     className
   );
@@ -39,17 +40,34 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
   const ButtonDisabled = notice === "disabled" ? true : false;
 
   const buttonNode = (
-    <button
-      className={classes}
-      onClick={handleClick}
-      disabled={ButtonDisabled}
-      arial-label="trigger button"
-    >
-      {iconNode}
-      <Typography font="bold" size={size} variant={"p"}>
-        {children}
-      </Typography>
-    </button>
+    <>
+      {(!children && (
+        <button
+          className={"button--variant-icon"}
+          onClick={handleClick}
+          arial-label="trigger button"
+        >
+          <Icon icon={iconName || "bug"} size={"lg"} />
+        </button>
+      )) || (
+        <button
+          className={classes}
+          onClick={handleClick}
+          disabled={ButtonDisabled}
+          arial-label="trigger button"
+        >
+          {iconNode}
+          <Typography
+            className="button--override-typography"
+            font="bold"
+            size={size}
+            variant={"p"}
+          >
+            {children}
+          </Typography>
+        </button>
+      )}
+    </>
   );
 
   return buttonNode;

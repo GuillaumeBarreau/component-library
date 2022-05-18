@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
     "baseUrl": "src",
     "rootDir": "src",
     "module": "esnext",
@@ -26,15 +23,8 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": [
-    "src"
-  ],
-  "extensions": [
-    ".ts",
-    ".tsx",
-    ".js",
-    ".jsx"
-  ],
+  "include": ["src"],
+  "extensions": [".ts", ".tsx", ".js", ".jsx"],
   "exclude": [
     "node_modules",
     "build",

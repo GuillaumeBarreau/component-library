@@ -1,7 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import { Component{{pascalCase name}}Props } from "./{{name}}.d";
-import { Wrapper } from "./{{name}}.styled";
 import "./{{name}}.css";
 
 export const {{pascalCase name}}: React.FC<Component{{pascalCase name}}Props> = (props) => {
@@ -12,8 +11,8 @@ export const {{pascalCase name}}: React.FC<Component{{pascalCase name}}Props> = 
   const classes = classNames(prefixCls, {}, className);
 
   return (
-    <Wrapper className={classes}>
+    <div className={classes}>
       {{pascalCase name }} component
-    </Wrapper>
+    </div>
   );
 };

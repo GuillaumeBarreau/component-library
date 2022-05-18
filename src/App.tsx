@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import { Atoms, Molecules } from "./components/";
+import { Atoms, Molecules, Organisms } from "./components/";
 
 function App() {
   const [InputTextValue, setInputTextValue] = useState<string>("");
@@ -13,6 +13,8 @@ function App() {
   const buttonEventClick = () => {
     setUserLogin(true);
   };
+
+  const eventHandleClick = () => console.log("eventHandleClick");
 
   const NodeLogin = (
     <>
@@ -42,14 +44,14 @@ function App() {
             <Atoms.Button
               notice="primary"
               handleClick={() => console.log("here")}
-              size="small"
+              size="medium"
             >
               default
             </Atoms.Button>
             <Atoms.Button
               handleClick={() => console.log("here")}
               notice="secondary"
-              size="small"
+              size="medium"
             >
               success
             </Atoms.Button>
@@ -438,7 +440,7 @@ function App() {
               handleClick={() => console.log("here")}
               notice="error"
               size="medium"
-              iconName="coffee"
+              iconName="circle-xmark"
             >
               error
             </Atoms.Button>
@@ -501,6 +503,98 @@ function App() {
               iconName="coffee"
             >
               disabled Block
+            </Atoms.Button>
+          </div>
+
+          <br />
+
+          <div className="App-section--container__content">
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              variant="outlined"
+            >
+              default
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="success"
+              variant="outlined"
+            >
+              success
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              variant="outlined"
+              notice="info"
+            >
+              info
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="warning"
+              variant="outlined"
+            >
+              warning
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="error"
+              variant="outlined"
+            >
+              error
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="disabled"
+              variant="outlined"
+            >
+              disabled
+            </Atoms.Button>
+          </div>
+
+          <br />
+
+          <div className="App-section--container__content">
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              variant="text"
+            >
+              default
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="success"
+              variant="text"
+            >
+              success
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              variant="text"
+              notice="info"
+            >
+              info
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="warning"
+              variant="text"
+            >
+              warning
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="error"
+              variant="text"
+            >
+              error
+            </Atoms.Button>
+            <Atoms.Button
+              handleClick={() => console.log("here")}
+              notice="disabled"
+              variant="text"
+            >
+              disabled
             </Atoms.Button>
           </div>
         </section>
@@ -731,6 +825,80 @@ function App() {
               size="medium"
               notice="secondary"
             />
+          </div>
+        </section>
+
+        <section className="App-section--container">
+          <div className="App-section--container__content">
+            <Organisms.Alert handleClick={eventHandleClick}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert handleClick={eventHandleClick} notice="info">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert handleClick={eventHandleClick} notice="success">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert handleClick={eventHandleClick} notice="warning">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert handleClick={eventHandleClick} notice="error">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+        </section>
+
+        <section className="App-section--container">
+          <div className="App-section--container__content">
+            <Organisms.Alert>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert notice="info">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert notice="success">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert notice="warning">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
+          </div>
+
+          <div className="App-section--container__content">
+            <Organisms.Alert notice="error">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              ratione nostrum, molestiae fugit vero consectetur?
+            </Organisms.Alert>
           </div>
         </section>
 

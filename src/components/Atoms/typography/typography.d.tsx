@@ -21,6 +21,6 @@ export interface ComponentTypographyProps {
   className?: string;
   font?: string;
   size?: TSizes;
-  children: string;
+  children?: React.ReactNode;
   variant?: TVariants;
 }
