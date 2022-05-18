@@ -1,8 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 import { ComponentBadgeProps } from "./badge.d";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Typography } from "components/Atoms/typography";
+import { Icon } from "components/Atoms/icon";
 import "./badge.css";
 
 export const Badge: React.FC<ComponentBadgeProps> = (props) => {
@@ -25,11 +25,11 @@ export const Badge: React.FC<ComponentBadgeProps> = (props) => {
   );
 
   const iconNameSize =
-    size === "xsmall" ? "2xs" : size === "small" ? "xs" : "sm";
+    size === "xsmall" ? "2xs" : size === "small" ? "2xs" : "sm";
 
   const iconNode: JSX.Element | null =
     iconName && iconNameSize ? (
-      <FontAwesomeIcon icon={iconName} size={iconNameSize} />
+      <Icon icon={iconName} size={iconNameSize} />
     ) : null;
 
   return (
@@ -39,7 +39,7 @@ export const Badge: React.FC<ComponentBadgeProps> = (props) => {
         font="bold"
         size={size}
         variant={"p"}
-        className={"badge--overide-typography"}
+        className="badge--override-typography"
       >
         {children}
       </Typography>

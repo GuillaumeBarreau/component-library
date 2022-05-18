@@ -3,12 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faCheckSquare,
-  faCoffee,
-  faExclamationCircle,
-} from "@fortawesome/free-solid-svg-icons";
+
 const queryParams = new URLSearchParams(window.location.search);
 
 if (queryParams.get("layout") === "neon") {
@@ -16,8 +11,6 @@ if (queryParams.get("layout") === "neon") {
 } else {
   require("./components/_settings/colors/colors.css");
 }
-
-library.add(faCheckSquare, faCoffee, faExclamationCircle);
 
 ReactDOM.render(
   <React.StrictMode>

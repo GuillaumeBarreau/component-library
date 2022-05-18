@@ -1,0 +1,114 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Badge } from "./badge";
+
+<Meta 
+  title="Components/Atoms/Badge" 
+  component={Badge}
+  argTypes={{
+  }}/>
+
+# Badge
+
+The Badge component is used to quickly provide additional information on an item (such as a number of elements, a category, a indication...).
+
+## React Component
+
+#### Import library
+
+```
+Import {Atoms} from '@bonjour-les-pixels/component-library';
+```
+
+#### Use Badge component
+
+```
+<Atoms.Badge> </Atoms.Badge>
+```
+
+<Canvas>
+  <Badge
+    children="badge"
+    notice="info"
+  />
+</Canvas>
+
+### Props
+
+<ArgsTable story="." />
+
+### Notice
+
+You can use the `notice` prop to modify the badge color. This props can be declined in 5 ways. The style varies according to the level of importance of the action in the page context.
+
+<Canvas>
+    <Badge
+      handleClick={() => console.log("here")}
+      children="Default"
+    />
+    <Badge
+      notice="success"
+      children="success"
+    />
+    <Badge
+      notice="info"
+      children="info"
+    />
+    <Badge
+      notice="error"
+      children="error"
+    />
+    <Badge
+      notice="warning"
+      children="warning"
+    />
+</Canvas>
+
+### ClassName
+
+You can use the `className` prop to override a component's styles using custom classes.
+
+```
+  <Badge
+  className="override-style-componenent"
+/>
+```
+
+### IconName
+
+You can use the iconName prop to have icons. You will find a list icons available below. 
+
+<Canvas>
+  <Badge
+    notice="success"
+    iconName="circle-exclamation"
+    children="button"
+  />
+</Canvas>
+
+### Size
+
+You can use the size prop to modify the button size. You can set the value to `xsmal`, `small` or `default`. 
+The default size is default and therefore doesn't need to be specified.
+
+<Canvas>
+  <Badge
+      size="xsmall"
+      children="Xsmall"
+      notice="info"
+    />
+  <Badge
+      size="small"
+      children="Small"
+      notice="info"
+    />
+  <Badge
+      size="default"
+      children="Default"
+      notice="info"
+    />
+  <Badge
+      size="medium"
+      children="Medium"
+      notice="info"
+    />
+</Canvas>

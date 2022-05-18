@@ -1,0 +1,306 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Button } from "./button";
+
+<Meta 
+  title="Components/Atoms/Button" 
+  component={Button}
+  argTypes={{
+    notice: {
+      control: "select",
+      description: "Modify the button color :",
+      options: [
+        "default",
+        "info",
+        "warning",
+        "success",
+        "error",
+        "disabled",
+        "primary",
+        "secondary",
+      ],
+    },
+    className: {
+      description: "Override a component's styles",
+      control: "text",
+    },
+    variant: {
+      control: "select",
+      options: ["text", "outlined"],
+    },
+    iconName: {
+      control: "select",
+      options: [""],
+    },
+    isBlock: {
+      control: "boolean",
+    },
+    children: {
+      description: "Text content",
+    }
+  }}/>
+
+# Button
+
+The Button component is used to trigger an action or event, such as submitting a form,
+opening a Dialog, canceling an action, or performing a delete operation.
+
+## React Component
+
+#### Import library
+
+```
+Import {Atoms} from '@bonjour-les-pixels/component-library';
+```
+
+#### Use Buttom component
+
+```
+<Atoms.Button> </Atoms.Button>
+```
+
+<Canvas>
+  <Button
+    handleClick={() => console.log("here")}
+    children="button"
+  />
+</Canvas>
+
+### Props
+
+<ArgsTable story="." />
+
+### Notice
+
+You can use the `notice` prop to modify the button color. This props can be declined in 7 ways. The style varies according to the level of importance of the action or the brand color in the page context.
+
+<Canvas>
+    <Button
+      notice="primary"
+      handleClick={() => console.log("here")}
+      size="medium"
+      children="Primary"
+    />
+    <Button
+      notice="secondary"
+      handleClick={() => console.log("here")}
+      size="medium"
+      children="secondary"
+    />
+    <Button
+      handleClick={() => console.log("here")}
+      size="medium"
+      children="Default"
+    />
+    <Button
+      notice="success"
+      handleClick={() => console.log("here")}
+      size="medium"
+      children="success"
+    />
+    <Button
+      notice="info"
+      handleClick={() => console.log("here")}
+      size="medium"
+      children="info"
+    />
+    <Button
+      notice="error"
+      handleClick={() => console.log("here")}
+      size="medium"
+      children="error"
+    />
+    <Button
+      notice="warning"
+      handleClick={() => console.log("here")}
+      size="medium"
+      children="warning"
+    />
+</Canvas>
+
+You can use the value `disabled` in `notice` prop when you need to keep a user from using the button component until some specific condition has been met.
+
+<Canvas>
+  <Button
+      notice="disabled"
+      handleClick={() => null}
+      children="disabled"
+    />
+</Canvas>
+
+### ClassName
+
+You can use the `className` prop to override a component's styles using custom classes.
+
+```
+  <Button
+  className="override-style-componenent"
+/>
+```
+
+### HandleClick
+
+You can use the `HandleClick` prop for determine what action is to be taken whenever an event is trigger.
+This prop is required.
+
+```
+  <Button
+  HandleClick={() => alert('event trigger')}
+/>
+```
+
+<Canvas>
+  <Button
+      handleClick={() => alert('event trigger')}
+      children="handleClick"
+    />
+</Canvas>
+
+### IconName
+
+You can use the iconName prop to have icons. You will find a list icons available below. 
+
+<Canvas>
+  <Button
+    handleClick={() => console.log("here")}
+    iconName="coffee"
+    children="button"
+  />
+</Canvas>
+
+### Variant
+
+You can use the `variant` prop to modify the forme button. This props can be declined in 2 ways, `outlined` and `text`. 
+
+#### `variant` : outlined
+
+<Canvas>
+    <Button
+      notice="primary"
+      handleClick={() => console.log("here")}
+      variant="outlined"
+      children="primary"
+    />
+    <Button
+      notice="secondary"
+      handleClick={() => console.log("here")}
+      variant="outlined"
+      children="primary"
+    />
+    <Button
+      handleClick={() => console.log("here")}
+      variant="outlined"
+      children="default"
+    />
+    <Button
+      notice="success"
+      handleClick={() => console.log("here")}
+      variant="outlined"
+      children="success"
+    />
+    <Button
+      notice="info"
+      handleClick={() => console.log("here")}
+      variant="outlined"
+      children="info"
+    />
+    <Button
+      notice="error"
+      handleClick={() => console.log("here")}
+     variant="outlined"
+      children="error"
+    />
+    <Button
+      notice="warning"
+      handleClick={() => console.log("here")}
+      variant="outlined"
+      children="warning"
+    />
+</Canvas>
+
+#### `variant` : text
+
+<Canvas>
+    <Button
+      notice="primary"
+      handleClick={() => console.log("here")}
+      variant="text"
+      children="primary"
+    />
+    <Button
+      notice="secondary"
+      handleClick={() => console.log("here")}
+      variant="text"
+      children="primary"
+    />
+    <Button
+      handleClick={() => console.log("here")}
+      variant="text"
+      children="default"
+    />
+    <Button
+      notice="success"
+      handleClick={() => console.log("here")}
+      variant="text"
+      children="success"
+    />
+    <Button
+      notice="info"
+      handleClick={() => console.log("here")}
+      variant="text"
+      children="info"
+    />
+    <Button
+      notice="error"
+      handleClick={() => console.log("here")}
+      variant="text"
+      children="error"
+    />
+    <Button
+      notice="warning"
+      handleClick={() => console.log("here")}
+      variant="text"
+      children="warning"
+    />
+</Canvas>
+
+### Size
+
+You can use the size prop to modify the button size. You can set the value to `xsmal`, `small`, `medium` or `default`. 
+The default size is default and therefore doesn't need to be specified.
+
+<Canvas>
+  <Button
+      handleClick={() => console.log("here")}
+      size="xsmall"
+      children="Xsmall"
+    />
+  <Button
+      handleClick={() => null}
+      size="small"
+      children="Small"
+    />
+  <Button
+      handleClick={() => null}
+      size="default"
+      children="Default"
+    />
+  <Button
+      handleClick={() => null}
+      size="medium"
+      children="Medium"
+    />
+</Canvas>
+
+### isBlock
+
+You can use attribute `isBlock` prop when you want the button to take the full width of its parent element.
+
+<Canvas>
+  <Button
+      notice="primary"
+      handleClick={() => null}
+      children="block Button"
+      isBlock
+    />
+</Canvas>
+

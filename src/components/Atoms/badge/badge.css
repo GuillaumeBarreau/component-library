@@ -6,6 +6,9 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.0625rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .badge > svg {
@@ -46,6 +49,6 @@
   border: 2px solid var(--color-notice-info--default);
 }
 
-.badge--overide-typography {
+.badge--override-typography {
   margin: 0;
 }

@@ -1,29 +1,22 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import { {{pascalCase name}} } from './{{name}}';
-import { Meta } from "@storybook/react/types-6-0";
 import { Component{{pascalCase name}}Props } from "./{{name}}.d";
 
-export default {
-  title: '{{pascalCase name}}',
-  component: {{pascalCase name}},
-  parameters: {
-    a11y: {
-      // optional selector which element to inspect
-      element: "#root",
-      // optional flag to prevent the automatic check
-      manual: false,
+<Meta 
+  title="Components/Atoms/Button" 
+  component={ {{name}} }
+  argTypes={ {
+    className: {
+      description: "Override a component's styles",
+      control: "text",
     },
-  },
-} as Meta;
+    children: {
+      description: "Text content",
+    }
+  } }/>
 
-const Template: any = (
-  args: JSX.IntrinsicAttributes & Component{{pascalCase name}}Props
-) => <>
-   <section style={ {display: "flex", justifyContent: "center"} }>
-    <{{pascalCase name}} {...args} /> 
-  </section>
-</>;
-
-export const {{pascalCase name}}Default = Template.bind({});
-{{pascalCase name}}Default.args = {
-  children: "{{name}}",
-};
+<Canvas>
+  <{{pascalCase name}}
+      children="disabled"
+    />
+</Canvas>

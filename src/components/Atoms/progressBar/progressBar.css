@@ -3,7 +3,7 @@
 .progressBar {
   width: 100%;
   transition: 0.5;
-  background: var(--color-base-02);
+  background: var(--color-base-02--light-shadow);
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(53, 69, 122, 0.4);
   position: relative;
@@ -33,6 +33,10 @@
   bottom: 0;
   transition: 1000ms;
   transition-timing-function: linear;
+}
+
+.progressBar--notice-default {
+  background: var(--color-text--light);
 }
 
 .progressBar--notice-primary {

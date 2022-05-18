@@ -1,9 +1,9 @@
-export interface ComponentProgressBarProps {
+import { ReactNode } from "react";
+
+export interface ComponentAlertProps {
+  children: React.ReactNode;
   className?: string;
-  progessMin: number;
-  progessMax: number;
-  progress: number;
-  size?: "xsmall" | "small" | "medium" | "default";
+  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
   notice?:
     | "default"
     | "success"

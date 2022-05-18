@@ -1,4 +1,7 @@
+import { Alert } from "./alert";
 // COMPONENT IMPORTS
 
-export // COMPONENT EXPORTS
- {};
+export {
+  Alert,
+  // COMPONENT EXPORTS
+};
