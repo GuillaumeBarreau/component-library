@@ -5,7 +5,7 @@ import "./block.css";
 
 export const Block: React.FC<ComponentBlockProps> = (props) => {
   const { children, className, variant = "div" } = props;
-  const prefixCls: string = "block";
+  const prefixCls = "block";
 
   const classes = classNames(prefixCls, {}, className);
 

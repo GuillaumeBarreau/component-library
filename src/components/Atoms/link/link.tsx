@@ -17,14 +17,14 @@ export const Link: React.FC<ComponentLinkProps> = (props) => {
   const {
     children,
     className,
-    ref,
+    // ref,
     target = "_self",
     disabled = false,
     decorated = false,
     href,
   } = props;
 
-  const prefixCls: string = "Link";
+  const prefixCls = "Link";
   const classes = classNames(
     prefixCls,
     {

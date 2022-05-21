@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import {Typography} from "../typography";
+import { Typography } from "../typography";
 import { ComponentTypographyProps } from "../typography.d";
 
 describe("Button", () => {

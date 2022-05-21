@@ -1,15 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Atoms, Molecules, Organisms } from "./components/";
-import { INotice } from "components/_settings/globalTypes/Types.d";
-
-let interval: NodeJS.Timeout | any = undefined;
 
 function App() {
   const [InputTextValue, setInputTextValue] = useState<string>("");
   const [userLogin, setUserLogin] = useState<boolean>(false);
   const [running, setRunning] = useState(false);
   const [progress, setProgress] = useState(0);
+  let interval: NodeJS.Timeout | any = undefined;
 
   const inputEventOnChange = (value: React.SetStateAction<string>) => {
     setInputTextValue(value);
@@ -21,12 +21,12 @@ function App() {
 
   const noticesBase = ["default", "success", "error", "warning", "info"];
   const noticesBase2 = [...noticesBase, "disabled"];
-  const noticesBase3 = [
-    ...noticesBase,
-    ...noticesBase2,
-    "primary",
-    "secondary",
-  ];
+  // const noticesBase3 = [
+  //   ...noticesBase,
+  //   ...noticesBase2,
+  //   "primary",
+  //   "secondary",
+  // ];
 
   const sizesBase = ["xsmall", "small", "medium"];
   const sizesBase2 = ["xsmall", "small", "default", "medium"];
@@ -47,8 +47,6 @@ function App() {
       clearInterval(interval);
     }
   }, [progress]);
-
-  const eventHandleClick = () => console.log("eventHandleClick");
 
   const NodeLogin = (
     <>

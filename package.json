@@ -45,7 +45,7 @@
     "dev": "npm-run-all --parallel build-watch start-playground",
     "prettier:check": "prettier --check src/**/*.ts{,x}",
     "prettier:fix": "prettier --write src/**/*.ts{,x}",
-    "eslint:check": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "eslint:check": "eslint src/**/*.ts{,x}",
     "eslint:fix": "tsc --noEmit && eslint --fix src/**/*.ts{,x}",
     "fixAll": "npm run eslint:fix && npm run prettier:fix",
     "CPD": "npx check-peer-dependencies",

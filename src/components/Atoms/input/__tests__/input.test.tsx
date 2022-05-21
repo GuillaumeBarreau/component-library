@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import {Input} from "../input";
+import { Input } from "../input";
 import { ComponentInputProps } from "../input.d";
 
 describe("Input", () => {
@@ -14,7 +14,7 @@ describe("Input", () => {
       handleOnChange: jest.fn(),
       type: "text",
       placeholder: "Login",
-      value: "value"
+      value: "value",
     };
   });
 
@@ -34,20 +34,15 @@ describe("Input", () => {
     expect(wrapper.html()).toContain("Login");
   });
 
-  it('Should contain defaultProps:labelDescription correctly', () => {
-    const wrapper = shallow(
-      <Input {...defaultProps} />
-    );
+  it("Should contain defaultProps:labelDescription correctly", () => {
+    const wrapper = shallow(<Input {...defaultProps} />);
     expect(() => wrapper).not.toThrow();
-    expect(wrapper.html()).toContain('label description');
+    expect(wrapper.html()).toContain("label description");
   });
 
-  it('Should contain defaultProps:namedInput correctly', () => {
-    const wrapper = shallow(
-      <Input {...defaultProps} />
-    );
+  it("Should contain defaultProps:namedInput correctly", () => {
+    const wrapper = shallow(<Input {...defaultProps} />);
     expect(() => wrapper).not.toThrow();
-    expect(wrapper.html()).toContain('label description');
+    expect(wrapper.html()).toContain("label description");
   });
-
 });

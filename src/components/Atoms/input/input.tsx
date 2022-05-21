@@ -13,7 +13,7 @@ export const Input: React.FC<ComponentInputProps> = (props) => {
     labelDescription,
     value,
   } = props;
-  const prefixCls: string = "input";
+  const prefixCls = "input";
 
   const classes = classNames(
     prefixCls,

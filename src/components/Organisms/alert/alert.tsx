@@ -21,7 +21,7 @@ export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
     progressBarLabel,
   } = props;
 
-  const prefixCls: string = "alert";
+  const prefixCls = "alert";
 
   const classes = classNames(
     prefixCls,
@@ -45,7 +45,7 @@ export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
   return (
     <div className={classes}>
       <div className="alert--content-top">
-        <Icon icon={iconAlert[notice]} size="sm" />
+        <Icon icon={`${iconAlert[notice]}`} size="sm" />
         <Typography className={"alert--overide-typography"} size="small">
           {children}
         </Typography>

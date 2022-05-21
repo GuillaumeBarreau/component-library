@@ -52,7 +52,7 @@ describe("Alert", () => {
     expect(wrapper.find(".alert--notice-warning")).toHaveLength(1);
   });
 
-  it("Should show with defaultProps:dismissible a new tag html correctly", () => {
+  it("Should contain defaultProps:dismissible a new tag html", () => {
     const wrapper = shallow(<Alert {...defaultProps} />);
     expect(wrapper.find(".alert--content-right")).toHaveLength(1);
   });

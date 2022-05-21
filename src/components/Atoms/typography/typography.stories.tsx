@@ -27,7 +27,7 @@ export default {
 
 const sizes: TSizes[] = ["xsmall", "small", "medium", "large", "xlarge"];
 
-const ListTemplate: any = (args: Partial<ComponentTypographyProps>) => (
+const ListTemplate = (args: Partial<ComponentTypographyProps>) => (
   <>
     {sizes.map((size: TSizes, index) => (
       <div key={size}>

@@ -14,7 +14,7 @@ export const Badge: React.FC<ComponentBadgeProps> = (props) => {
     iconName,
   } = props;
 
-  const prefixCls: string = "badge";
+  const prefixCls = "badge";
 
   const classes = classNames(
     prefixCls,

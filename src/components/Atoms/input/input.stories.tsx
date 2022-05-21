@@ -30,7 +30,7 @@ export default {
   },
 } as Meta;
 
-const Template: any = (args: JSX.IntrinsicAttributes & ComponentInputProps) => (
+const Template = (args: JSX.IntrinsicAttributes & ComponentInputProps) => (
   <>
     <section style={{ display: "flex", justifyContent: "center" }}>
       <Input {...args} />

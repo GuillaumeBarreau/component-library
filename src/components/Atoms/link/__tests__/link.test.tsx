@@ -1,37 +1,30 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { Link } from '../link';
-import { ComponentLinkProps } from '../link.d';
+import React from "react";
+import { shallow } from "enzyme";
+import { Link } from "../link";
+import { ComponentLinkProps } from "../link.d";
 
-describe('Link', () => {
+describe("Link", () => {
   let defaultProps: JSX.IntrinsicAttributes & ComponentLinkProps;
 
   beforeEach(() => {
     defaultProps = {
-      children: "Link"
-    }
+      children: "Link",
+    };
   });
 
-  it('renders correctly', () => {
-    const wrapper = shallow(
-      <Link {...defaultProps}/>
-    );
+  it("renders correctly", () => {
+    const wrapper = shallow(<Link {...defaultProps} />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 
-  it('mount correctly', () => {
-    const wrapper = shallow(
-      <Link {...defaultProps} />
-    );
+  it("mount correctly", () => {
+    const wrapper = shallow(<Link {...defaultProps} />);
     expect(() => wrapper).not.toThrow();
   });
 
-  it('Should contain defaultProps:children correctly', () => {
-    const wrapper = shallow(
-      <Link {...defaultProps} />
-    );
+  it("Should contain defaultProps:children correctly", () => {
+    const wrapper = shallow(<Link {...defaultProps} />);
     expect(() => wrapper).not.toThrow();
-    expect(wrapper.html()).toContain('Link');
+    expect(wrapper.html()).toContain("Link");
   });
-
 });
