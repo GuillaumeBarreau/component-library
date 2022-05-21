@@ -496,6 +496,37 @@ exports[`renders correctly 1`] = `
       </div>
     </section>
     <section className=\\"App-section--container\\">
+      <Button handleClick={[Function: handleClick]} notice=\\"default\\">
+        Start ProgressBar
+      </Button>
+      <br />
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"default\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"success\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"error\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"warning\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"info\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+    </section>
+    <section className=\\"App-section--container\\">
       <Input handleOnChange={[Function: handleOnChange]} placeholder=\\"login\\" namedInput=\\"login\\" labelDescription=\\"login\\" value=\\"\\" />
       <Button handleClick={[Function: buttonEventClick]} notice=\\"disabled\\">
         disabled
