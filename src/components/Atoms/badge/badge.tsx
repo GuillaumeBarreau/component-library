@@ -25,7 +25,7 @@ export const Badge: React.FC<ComponentBadgeProps> = (props) => {
   );
 
   const iconNameSize =
-    size === "xsmall" ? "2xs" : size === "small" ? "2xs" : "sm";
+    size === "xsmall" ? "xs" : size === "small" ? "sm" : "1x";
 
   const iconNode: JSX.Element | null =
     iconName && iconNameSize ? (
