@@ -8,12 +8,11 @@ describe("Button", () => {
 
   beforeEach(() => {
     defaultProps = {
-      className: "button",
+      className: "override-class",
       handleClick: jest.fn(),
       notice: "default",
       iconName: "check-square",
       isBlock: false,
-      type: "",
       children: "Button",
     };
   });
@@ -34,10 +33,15 @@ describe("Button", () => {
     expect(wrapper.html()).toContain("Button");
   });
 
+  it("Should contain defaultProps:className correctly", () => {
+    const wrapper = shallow(<Button {...defaultProps} />);
+    expect(wrapper.html()).toContain("override-class");
+  });
+
   it("Should contain defaultProps:status correctly", () => {
     const wrapper = mount(<Button {...defaultProps} />);
     expect(() => wrapper).not.toThrow();
-    expect(wrapper.html()).toContain("button--default");
+    expect(wrapper.html()).toContain("button--notice-default");
   });
 
   it("Should contain defaultProps:Notice with following value disabled correctly", () => {

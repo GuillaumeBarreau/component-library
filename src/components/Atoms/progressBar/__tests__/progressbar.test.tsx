@@ -9,10 +9,9 @@ describe("ProgressBar", () => {
   beforeEach(() => {
     defaultProps = {
       notice: "primary",
-      progessMin: 0,
-      progessMax: 100,
       progress: 50,
       size: "small",
+      className: "override-class",
     };
   });
 
@@ -35,6 +34,11 @@ describe("ProgressBar", () => {
   it("Should contain defaultProps:size correctly", () => {
     const wrapper = shallow(<ProgressBar {...defaultProps} />);
     expect(wrapper.html()).toContain("small");
+  });
+
+  it("Should contain defaultProps:className correctly", () => {
+    const wrapper = shallow(<ProgressBar {...defaultProps} />);
+    expect(wrapper.html()).toContain("override-class");
   });
 
   it("Should contain defaultProps:progessMax correctly", () => {

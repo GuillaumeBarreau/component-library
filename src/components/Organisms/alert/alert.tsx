@@ -1,12 +1,25 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import { ComponentAlertProps } from "./alert.d";
-import { Atoms } from "components";
+import { ComponentAlertProps, IProgressBarProps } from "./alert.d";
+import { Icon } from "components/Atoms/icon";
+import { Typography } from "components/Atoms/typography";
+import { Button } from "components/Atoms/button";
+import { ProgressBar } from "components/Atoms/progressBar";
 import "./alert.css";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export const Alert: React.FC<ComponentAlertProps> = (props) => {
-  const { children, className, notice = "default", handleClick } = props;
+export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
+  props
+) => {
+  const [fadeOut, setFadeOut] = useState(false);
+  const {
+    children,
+    className,
+    notice = "default",
+    dismissible,
+    progressBar,
+    progressBarLabel,
+  } = props;
 
   const prefixCls: string = "alert";
 
@@ -14,6 +27,7 @@ export const Alert: React.FC<ComponentAlertProps> = (props) => {
     prefixCls,
     {
       [`${prefixCls}--notice-${notice}`]: notice,
+      [`${prefixCls}--status-fadeOut`]: fadeOut || progressBar === 100,
     },
     className
   );
@@ -31,28 +45,31 @@ export const Alert: React.FC<ComponentAlertProps> = (props) => {
   return (
     <div className={classes}>
       <div className="alert--content-top">
-        <Atoms.Icon icon={iconAlert[notice]} size="sm" />
-        <Atoms.Typography className={"alert--overide-typography"} size="small">
+        <Icon icon={iconAlert[notice]} size="sm" />
+        <Typography className={"alert--overide-typography"} size="small">
           {children}
-        </Atoms.Typography>
-        {handleClick && (
+        </Typography>
+        {dismissible && (
           <div className="alert--content-right">
-            <Atoms.Button
-              handleClick={() => handleClick}
+            <Button
+              handleClick={() => {
+                setFadeOut(true);
+              }}
               iconName="circle-xmark"
             />
           </div>
         )}
       </div>
-      <div className="alert--content-bottom">
-        <Atoms.ProgressBar
-          progessMax={100}
-          progessMin={0}
-          progress={50}
-          size="xsmall"
-          notice={notice}
-        ></Atoms.ProgressBar>
-      </div>
+      {(progressBar || progressBar === 0) && (
+        <div className="alert--content-bottom">
+          <ProgressBar progress={progressBar} size="xsmall" notice={notice} />
+          {progressBarLabel && (
+            <Typography className="alert--overide-typography">
+              {progressBar}%
+            </Typography>
+          )}
+        </div>
+      )}
     </div>
   );
 };

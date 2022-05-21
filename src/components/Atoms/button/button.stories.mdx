@@ -7,7 +7,7 @@ import { Button } from "./button";
   argTypes={{
     notice: {
       control: "select",
-      description: "Modify the button color :",
+      description: "Modify the button color or used disable when the user cannot proceed or until an input is collected.",
       options: [
         "default",
         "info",
@@ -29,14 +29,24 @@ import { Button } from "./button";
     },
     iconName: {
       control: "select",
+      description: "Icon displayed on the left of the button",
       options: [""],
     },
     isBlock: {
+      description: "take the full width of its parent element",
+      control: "boolean",
+    },
+    handleClick: {
+      description: "Function called when the user clicks on the button",
       control: "boolean",
     },
     children: {
-      description: "Text content",
+      description: "Children of the button.",
     }
+  }}
+  args={{
+    children: 'children',
+    handleClick: () => console.log("test")
   }}/>
 
 # Button
@@ -55,19 +65,22 @@ Import {Atoms} from '@bonjour-les-pixels/component-library';
 #### Use Buttom component
 
 ```
-<Atoms.Button> </Atoms.Button>
+<Atoms.Button {...props}> CHILDREN_TEXT </Atoms.Button>
 ```
 
+## Playground
+
 <Canvas>
-  <Button
-    handleClick={() => console.log("here")}
-    children="button"
-  />
+  <Story name="Button">
+    {args => {
+      return <Button {...args}  />;
+    }}
+  </Story>
 </Canvas>
 
 ### Props
 
-<ArgsTable story="." />
+<ArgsTable story="Button" />
 
 ### Notice
 

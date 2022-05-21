@@ -5,6 +5,7 @@ import { ComponentButtonProps } from "./button.d";
 import "./button.css";
 import { Typography } from "components/Atoms/typography";
 import { Icon } from "components/Atoms/icon";
+import { SizeProp } from "@fortawesome/fontawesome-svg-core";
 
 export const Button: React.FC<ComponentButtonProps> = (props) => {
   const {
@@ -18,8 +19,15 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
     notice = "default",
   } = props;
 
+  const iconNameSize: { [key: string]: SizeProp } = {
+    xsmall: "lg",
+    small: "lg",
+    medium: "2x",
+    default: "2x",
+  };
+
   const iconNode: JSX.Element | null = iconName ? (
-    <Icon icon={iconName} size={"lg"} />
+    <Icon icon={iconName} size={`${iconNameSize[size]}`} />
   ) : !children && !iconName ? (
     <Icon icon={"bug"} size={"xs"} />
   ) : null;
@@ -37,7 +45,7 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
     className
   );
 
-  const ButtonDisabled = notice === "disabled" ? true : false;
+  const ButtonDisabled: boolean = notice === "disabled" ? true : false;
 
   const buttonNode = (
     <>

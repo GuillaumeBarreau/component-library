@@ -1,0 +1,260 @@
+import { Meta, Story, Canvas, ArgsTable, Preview, Props } from "@storybook/addon-docs";
+import { Icon } from "./icon";
+
+<Meta 
+  title="Components/Atoms/Icon" 
+  component={Icon}
+  argTypes={{
+    icon: {
+      control: "select",
+      options: ["circle-exclamation", 
+      "coffee", 
+      "bomb", 
+      "check-square", 
+      "circle-xmark", 
+      "circle-check", 
+      "bug"],
+      description: "",
+    },
+    size: {
+      control: "select",
+      options: ["xs", "lg", "sm", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"],
+      description: "",
+    }
+  }}
+  args={{
+    icon: 'coffee',
+    size: '3x'
+  }}/>
+
+# Badge
+
+The Icon are visual symbols for communicating additional meaning, status, and available actions.
+
+## React Component
+
+#### Import library
+
+```
+Import {Atoms} from '@bonjour-les-pixels/component-library';
+```
+
+#### Use Icon component
+
+```
+<Atoms.Icon {...props}/>
+```
+
+## Playground
+
+<Canvas>
+  <Story name="Icon">
+    {args => {
+      return <Icon {...args}  />;
+    }}
+  </Story>
+</Canvas>
+
+### Props
+
+<ArgsTable story="Icon" />
+
+### IconName
+
+You can use the icon prop to have icons. You will find a list icons available below. 
+
+<Canvas>
+  <div>
+      <ul
+       style={{
+          listStyle: 'none',
+          color: '#2b356c',
+          display: 'flex',
+          flexFlow: 'wrap'
+      }}>
+        <li
+          style={{
+            width: '120px',
+            height: '120px',
+            listStyle: 'none',
+            display: 'flex',
+            textAlign: 'center',
+            flexDirection: 'column',
+            margin: '1rem'
+        }}>
+          <Icon
+            size="3x"
+            icon="coffee"
+          />
+          <p>
+            coffee
+          </p>
+        </li>
+        <li
+          style={{
+              width: '120px',
+              height: '120px',
+              listStyle: 'none',
+              display: 'flex',
+              textAlign: 'center',
+              flexDirection: 'column',
+              margin: '1rem'
+          }}>
+          <Icon
+            size="3x"
+            icon="circle-exclamation"
+          />
+          <p>
+            circle-exclamation
+          </p>
+        </li>
+        <li
+          style={{
+              width: '120px',
+              height: '120px',
+              listStyle: 'none',
+              display: 'flex',
+              textAlign: 'center',
+              flexDirection: 'column',
+              margin: '1rem'
+          }}>
+          <Icon
+            size="3x"
+            icon="check-square"
+          />
+          <p>
+            check-square
+          </p>
+        </li>
+        <li
+          style={{
+              width: '120px',
+              height: '120px',
+              listStyle: 'none',
+              display: 'flex',
+              textAlign: 'center',
+              flexDirection: 'column',
+              margin: '1rem'
+          }}>
+          <Icon
+            size="3x"
+            icon="circle-xmark"
+          />
+          <p>
+            circle-xmark
+          </p>
+        </li>
+        <li
+          style={{
+              width: '120px',
+              height: '120px',
+              listStyle: 'none',
+              display: 'flex',
+              textAlign: 'center',
+              flexDirection: 'column',
+              margin: '1rem'
+          }}>
+          <Icon
+            size="3x"
+            icon="circle-check"
+          />
+          <p>
+            circle-check
+          </p>
+        </li>
+        <li
+          style={{
+              width: '120px',
+              height: '120px',
+              listStyle: 'none',
+              display: 'flex',
+              textAlign: 'center',
+              flexDirection: 'column',
+              margin: '1rem'
+          }}>
+          <Icon
+            size="3x"
+            icon="bomb"
+          />
+          <p>
+            bomb
+          </p>
+        </li>
+        <li
+          style={{
+              width: '120px',
+              height: '120px',
+              listStyle: 'none',
+              display: 'flex',
+              textAlign: 'center',
+              flexDirection: 'column',
+              margin: '1rem'
+          }}>
+          <Icon
+            size="3x"
+            icon="bell"
+          />
+          <p>
+            bell
+          </p>
+        </li>
+        <li
+          style={{
+              width: '120px',
+              height: '120px',
+              listStyle: 'none',
+              display: 'flex',
+              textAlign: 'center',
+              flexDirection: 'column',
+              margin: '1rem'
+          }}>
+          <Icon
+            size="3x"
+            icon="bug"
+          />
+          <p>
+            bug
+          </p>
+        </li>
+      </ul>
+    </div>
+</Canvas>
+
+### Size
+
+You can use the size prop to modify the button size. You can set the value to `xs`
+ , `lg`
+ , `sm`
+ , `1x`
+ , `2x`
+ , `3x`
+ , `4x`
+ , `5x`
+ , `6x`
+ , `7x`
+ , `8x`
+ , `9x`
+ , `10x`.
+
+<Canvas>
+  <Icon
+      size="2xs"
+      icon="circle-exclamation"
+    />
+  <Icon
+      size="xs"
+      icon="circle-exclamation"
+    />
+  <Icon
+      size="sm"
+      icon="circle-exclamation"
+    />
+  <Icon
+      size="1x"
+      icon="circle-exclamation"
+    />
+    <Icon
+      size="lg"
+      icon="circle-exclamation"
+    />
+</Canvas>

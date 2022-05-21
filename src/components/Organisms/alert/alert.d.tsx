@@ -1,17 +1,13 @@
-import { ReactNode } from "react";
+import { INotice } from "components/_settings/globalTypes/Types.d";
+
+export type IProgressBarProps =
+  | { progressBar?: number; progressBarLabel?: never }
+  | { progressBar: number; progressBarLabel?: boolean }
+  | { progressBarLabel: true; progressBar: number };
 
 export interface ComponentAlertProps {
   children: React.ReactNode;
   className?: string;
-  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
-  notice?:
-    | "default"
-    | "success"
-    | "info"
-    | "warning"
-    | "error"
-    | "disabled"
-    | "primary"
-    | "secondary"
-    | undefined;
+  dismissible?: boolean;
+  notice?: INotice;
 }
