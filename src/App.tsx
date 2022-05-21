@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Atoms, Molecules, Organisms } from "./components/";
