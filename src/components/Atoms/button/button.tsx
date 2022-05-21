@@ -19,7 +19,7 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
     notice = "default",
   } = props;
 
-  const iconNameSize: { [key: string]: SizeProp } = {
+  const iconNameSize: { [key: string]: SizeProp | "2x" } = {
     xsmall: "lg",
     small: "lg",
     medium: "2x",
