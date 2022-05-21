@@ -1,10 +1,10 @@
 {
-  "name": "@bonjour-les-pixels/component-library",
-  "version": "1.0.23",
+  "name": "@bonjour_les_pixels/component-library",
+  "version": "0.0.2",
   "description": "Bonjour les Pixels -- component-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "author": "Bonjour les Pixels",
+  "author": "BonjourLesPixels",
   "license": "MIT",
   "source": "./src/components/index.tsx",
   "dependencies": {
@@ -39,6 +39,8 @@
     "eject": "react-scripts eject",
     "build": "rollup -c",
     "buildT": "tsc --outDir dist/lib --declarationDir dist/types --declaration true && rollup -c",
+    "prepublish:public": "npm run buildT",
+    "publish:public": "npm publish --access public",
     "build-watch": "rollup -c -w",
     "start-playground": "cd playground && npm run start",
     "i-all": "npm i && cd playground && npm i",
@@ -53,6 +55,9 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
+  "files": [
+    "dist"
+  ],
   "resolutions": {
     "styled-components": "^5"
   },
