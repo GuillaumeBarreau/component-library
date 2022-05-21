@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { {{pascalCase name}} } from './{{name}}';
+import { Component{{pascalCase name}}Props } from "./{{name}}.d";
+
+<Meta 
+  title="Components/Atoms/{{pascalCase name}}" 
+  component={ {{pascalCase name}} }
+  argTypes={ {
+    className: {
+      description: "Override a component's styles",
+      control: "text",
+    },
+    children: {
+      control: "text",
+      description: "Children of the {{name}}.",
+    }
+  } }
+  args={ {
+    children: "children",
+    className: "Override className"
+  } }/>
+
+## React Component
+
+#### Import library
+
+```
+Import {Atoms} from '@bonjour-les-pixels/component-library';
+```
+
+#### Use {{pascalCase name}} component
+
+```
+<Atoms.{{pascalCase name}} {...props}> CHILDREN_TEXT </Atoms.{{pascalCase name}}>
+```
+
+## Playground
+
+Use this playground to test the {{pascalCase name}} component
+
+<Canvas>
+  <Story name="{{pascalCase name}}">
+    {args => {
+      return <{{pascalCase name}} {...args}  />;
+    }}
+  </Story>
+</Canvas>

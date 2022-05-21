@@ -5,6 +5,7 @@ import { Badge } from "./badge";
 import { Block } from "./block";
 import { ProgressBar } from "./progressBar";
 import { Icon } from "./icon";
+import { Link } from './link';
 // COMPONENT IMPORTS
 
 export {
@@ -15,5 +16,6 @@ export {
   Block,
   ProgressBar,
   Icon,
-  // COMPONENT EXPORTS
+  	Link,
+// COMPONENT EXPORTS
 };
