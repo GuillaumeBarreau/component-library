@@ -41,6 +41,7 @@ import { Button } from "./button";
       control: "boolean",
     },
     children: {
+      control: "text",
       description: "Children of the button.",
     }
   }}
@@ -87,47 +88,49 @@ Import {Atoms} from '@bonjour-les-pixels/component-library';
 You can use the `notice` prop to modify the button color. This props can be declined in 7 ways. The style varies according to the level of importance of the action or the brand color in the page context.
 
 <Canvas>
-    <Button
-      notice="primary"
-      handleClick={() => console.log("here")}
-      size="medium"
-      children="Primary"
-    />
-    <Button
-      notice="secondary"
-      handleClick={() => console.log("here")}
-      size="medium"
-      children="secondary"
-    />
-    <Button
-      handleClick={() => console.log("here")}
-      size="medium"
-      children="Default"
-    />
-    <Button
-      notice="success"
-      handleClick={() => console.log("here")}
-      size="medium"
-      children="success"
-    />
-    <Button
-      notice="info"
-      handleClick={() => console.log("here")}
-      size="medium"
-      children="info"
-    />
-    <Button
-      notice="error"
-      handleClick={() => console.log("here")}
-      size="medium"
-      children="error"
-    />
-    <Button
-      notice="warning"
-      handleClick={() => console.log("here")}
-      size="medium"
-      children="warning"
-    />
+    <Story name="Button/Notice">
+        <Button
+          notice="primary"
+          handleClick={() => console.log("here")}
+          size="medium"
+          children="Primary"
+        />
+        <Button
+          notice="secondary"
+          handleClick={() => console.log("here")}
+          size="medium"
+          children="secondary"
+        />
+        <Button
+          handleClick={() => console.log("here")}
+          size="medium"
+          children="Default"
+        />
+        <Button
+          notice="success"
+          handleClick={() => console.log("here")}
+          size="medium"
+          children="success"
+        />
+        <Button
+          notice="info"
+          handleClick={() => console.log("here")}
+          size="medium"
+          children="info"
+        />
+        <Button
+          notice="error"
+          handleClick={() => console.log("here")}
+          size="medium"
+          children="error"
+        />
+        <Button
+          notice="warning"
+          handleClick={() => console.log("here")}
+          size="medium"
+          children="warning"
+        />
+     </Story>
 </Canvas>
 
 You can use the value `disabled` in `notice` prop when you need to keep a user from using the button component until some specific condition has been met.
@@ -162,10 +165,12 @@ This prop is required.
 ```
 
 <Canvas>
-  <Button
-      handleClick={() => alert('event trigger')}
-      children="handleClick"
-    />
+  <Story name="Button/HandleClick">
+    <Button
+        handleClick={() => alert('event trigger')}
+        children="handleClick"
+      />
+  </Story>
 </Canvas>
 
 ### IconName
@@ -173,12 +178,15 @@ This prop is required.
 You can use the iconName prop to have icons. You will find a list icons available below. 
 
 <Canvas>
-  <Button
-    handleClick={() => console.log("here")}
-    iconName="coffee"
-    children="button"
-  />
+  <Story name="Button/IconName">
+    <Button
+      handleClick={() => console.log("here")}
+      iconName="coffee"
+      children="button"
+    />
+  </Story>
 </Canvas>
+
 
 ### Variant
 
@@ -187,52 +195,55 @@ You can use the `variant` prop to modify the forme button. This props can be dec
 #### `variant` : outlined
 
 <Canvas>
-    <Button
-      notice="primary"
-      handleClick={() => console.log("here")}
+  <Story name="Button/Variant">
+      <Button
+        notice="primary"
+        handleClick={() => console.log("here")}
+        variant="outlined"
+        children="primary"
+      />
+      <Button
+        notice="secondary"
+        handleClick={() => console.log("here")}
+        variant="outlined"
+        children="primary"
+      />
+      <Button
+        handleClick={() => console.log("here")}
+        variant="outlined"
+        children="default"
+      />
+      <Button
+        notice="success"
+        handleClick={() => console.log("here")}
+        variant="outlined"
+        children="success"
+      />
+      <Button
+        notice="info"
+        handleClick={() => console.log("here")}
+        variant="outlined"
+        children="info"
+      />
+      <Button
+        notice="error"
+        handleClick={() => console.log("here")}
       variant="outlined"
-      children="primary"
-    />
-    <Button
-      notice="secondary"
-      handleClick={() => console.log("here")}
-      variant="outlined"
-      children="primary"
-    />
-    <Button
-      handleClick={() => console.log("here")}
-      variant="outlined"
-      children="default"
-    />
-    <Button
-      notice="success"
-      handleClick={() => console.log("here")}
-      variant="outlined"
-      children="success"
-    />
-    <Button
-      notice="info"
-      handleClick={() => console.log("here")}
-      variant="outlined"
-      children="info"
-    />
-    <Button
-      notice="error"
-      handleClick={() => console.log("here")}
-     variant="outlined"
-      children="error"
-    />
-    <Button
-      notice="warning"
-      handleClick={() => console.log("here")}
-      variant="outlined"
-      children="warning"
-    />
+        children="error"
+      />
+      <Button
+        notice="warning"
+        handleClick={() => console.log("here")}
+        variant="outlined"
+        children="warning"
+      />
+  </Story>
 </Canvas>
 
 #### `variant` : text
 
 <Canvas>
+  <Story name="Button/Variant-text">
     <Button
       notice="primary"
       handleClick={() => console.log("here")}
@@ -274,6 +285,7 @@ You can use the `variant` prop to modify the forme button. This props can be dec
       variant="text"
       children="warning"
     />
+  </Story>
 </Canvas>
 
 ### Size
@@ -282,26 +294,28 @@ You can use the size prop to modify the button size. You can set the value to `x
 The default size is default and therefore doesn't need to be specified.
 
 <Canvas>
-  <Button
-      handleClick={() => console.log("here")}
-      size="xsmall"
-      children="Xsmall"
-    />
-  <Button
-      handleClick={() => null}
-      size="small"
-      children="Small"
-    />
-  <Button
-      handleClick={() => null}
-      size="default"
-      children="Default"
-    />
-  <Button
-      handleClick={() => null}
-      size="medium"
-      children="Medium"
-    />
+  <Story name="Button/Size">
+    <Button
+        handleClick={() => console.log("here")}
+        size="xsmall"
+        children="Xsmall"
+      />
+    <Button
+        handleClick={() => null}
+        size="small"
+        children="Small"
+      />
+    <Button
+        handleClick={() => null}
+        size="default"
+        children="Default"
+      />
+    <Button
+        handleClick={() => null}
+        size="medium"
+        children="Medium"
+      />
+  </Story>
 </Canvas>
 
 ### isBlock
@@ -309,11 +323,13 @@ The default size is default and therefore doesn't need to be specified.
 You can use attribute `isBlock` prop when you want the button to take the full width of its parent element.
 
 <Canvas>
-  <Button
-      notice="primary"
-      handleClick={() => null}
-      children="block Button"
-      isBlock
-    />
+  <Story name="Button/isBlock">
+    <Button
+        notice="primary"
+        handleClick={() => null}
+        children="block Button"
+        isBlock
+      />
+  </Story>
 </Canvas>
 
