@@ -6,7 +6,7 @@ import { Typography } from "components/Atoms/typography";
 import { Button } from "components/Atoms/button";
 import { ProgressBar } from "components/Atoms/progressBar";
 import "./alert.css";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { TiconName } from "components/_settings/globalTypes/Types.d";
 
 export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
   props
@@ -33,7 +33,7 @@ export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
   );
 
   const iconAlert: {
-    [key: string]: IconProp;
+    [key: string]: TiconName;
   } = {
     info: "bell",
     warning: "circle-exclamation",
@@ -45,7 +45,7 @@ export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
   return (
     <div className={classes}>
       <div className="alert--content-top">
-        <Icon icon={`${iconAlert[notice]}`} size="sm" />
+        <Icon icon={iconAlert[notice]} size="sm" />
         <Typography className={"alert--overide-typography"} size="small">
           {children}
         </Typography>

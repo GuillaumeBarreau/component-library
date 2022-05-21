@@ -1,16 +1,19 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { Alert } from "../alert";
-import { ComponentAlertProps } from "../alert.d";
+import { ComponentAlertProps, IProgressBarProps } from "../alert.d";
 
 describe("Alert", () => {
-  let defaultProps: JSX.IntrinsicAttributes & ComponentAlertProps;
+  let defaultProps: JSX.IntrinsicAttributes &
+    ComponentAlertProps &
+    IProgressBarProps;
 
   beforeEach(() => {
     defaultProps = {
       children: "children Content",
       className: "override-class",
       dismissible: true,
+      progressBarLabel: true,
       progressBar: 64,
       notice: "info",
     };
