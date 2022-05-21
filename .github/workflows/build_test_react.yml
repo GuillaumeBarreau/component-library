@@ -39,3 +39,13 @@ jobs:
         run: |
           npm ci
           npm test   
+
+      - name: Run Linter with Eslint
+        run: |
+          npm ci
+          npm run eslint:check  
+
+      - name: Run Linter with Prettier
+        run: |
+          npm ci
+          npm run Prettier:check   
