@@ -4,14 +4,7 @@ import { ComponentProgressBarProps } from "./progressBar.d";
 import "./progressBar.css";
 
 export const ProgressBar: React.FC<ComponentProgressBarProps> = (props) => {
-  const {
-    className,
-    notice = "primary",
-    progessMin,
-    progessMax,
-    progress,
-    size = "default",
-  } = props;
+  const { className, notice = "primary", progress, size = "default" } = props;
 
   const prefixCls: string = "progressBar";
   const classes = classNames(
@@ -28,8 +21,8 @@ export const ProgressBar: React.FC<ComponentProgressBarProps> = (props) => {
         className={`progressBar--content progressBar--notice-${notice}`}
         style={{ width: `${progress}%` }}
         aria-valuenow={progress}
-        aria-valuemin={progessMin}
-        aria-valuemax={progessMax}
+        aria-valuemin={0}
+        aria-valuemax={100}
       />
     </div>
   );

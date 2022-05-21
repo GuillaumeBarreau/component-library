@@ -1,0 +1,234 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Alert } from "./alert";
+
+<Meta 
+  title="Components/Organisms/Alert" 
+  component={Alert}
+  argTypes={{
+    notice: {
+      control: "select",
+      description: "Modify the Alert background",
+      options: [
+        "default",
+        "info",
+        "warning",
+        "success",
+        "error",
+      ],
+    },
+    progressBar: {
+      description: "show process progressBar",
+      control: "number",
+    },
+    progressBarLabel: {
+      description: "show process progressBar",
+      control: "number",
+    },
+    className: {
+      description: "Override a component's styles",
+      control: "text",
+    },
+    children: {
+        control: "text",
+        description: "Text content",
+    }
+  }}
+  args={{
+    children: 'children',
+    dismissible: 'true'
+  }}/>
+
+# Alert
+
+The Alert component is a small text box notifying the user with short, timely, and relevant information. 
+The Alert component appears at the bottom-right of the page.
+
+## React Component
+
+#### Import library
+
+```
+Import {Organisms} from '@bonjour-les-pixels/component-library';
+```
+
+#### Use Buttom component
+
+```
+<Organisms.Alert {...props}> CHILDREN_TEXT </Organisms.Alert>
+```
+
+## Playground
+
+<Canvas>
+  <Story name="Alert">
+    {args => {
+      return <Alert {...args}  />;
+    }}
+  </Story>
+</Canvas>
+
+### Props
+
+<ArgsTable story="Alert" />
+
+### Notice
+
+You can use the `notice` prop on a Alert to modify the background color. You can set the value to primary, success, warning, info or error. The style varies according to the level of importance of the action in the system context.
+
+<Canvas>
+    <Alert
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="success"
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="info"
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="error"
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="warning"
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+</Canvas>
+
+### ClassName
+
+You can use the `className` prop to override a component's styles using custom classes.
+
+```
+  <Alert className="OVERRIDE_STYLE_CLASSNAME" />
+```
+
+### Dismissible
+
+You can use the prop `dismissible` to display the action button to trigger a window closure.
+
+<Canvas>
+    <Alert
+      size="medium"
+      dismissible
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="success"
+      dismissible
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="info"
+      dismissible
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="error"
+      dismissible
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="warning"
+      dismissible
+      size="medium"
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+</Canvas>
+
+### ProgressBar
+
+You can use the `progressBar` props to display the progress bar time until the window is automatically closed.
+
+<Canvas>
+    <Alert
+      size="medium"
+      progressBar={10}
+      dismissible
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="success"
+      dismissible
+      size="medium"
+      progressBar={75}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="info"
+      dismissible
+      size="medium"
+      progressBar={25}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="error"
+      dismissible
+      size="medium"
+      progressBar={50}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="warning"
+      dismissible
+      size="medium"
+      progressBar={75}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+</Canvas>
+
+### ProgressBarLabel
+
+You can use the boolean `progressBarLabel` props to display a label (example: 46%).
+
+<Canvas>
+    <Alert
+      size="medium"
+      progressBar={10}
+      dismissible
+      progressBarLabel
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="success"
+      dismissible
+      progressBarLabel
+      size="medium"
+      progressBar={75}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="info"
+      dismissible
+      progressBarLabel
+      size="medium"
+      progressBar={25}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="error"
+      dismissible
+      progressBarLabel
+      size="medium"
+      progressBar={50}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+    <Alert
+      notice="warning"
+      dismissible
+      progressBarLabel
+      size="medium"
+      progressBar={75}
+      children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
+    />
+</Canvas>

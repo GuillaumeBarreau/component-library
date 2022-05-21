@@ -1,0 +1,141 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { ProgressBar } from "./progressBar";
+
+<Meta 
+  title="Components/Atoms/ProgressBar" 
+  component={ProgressBar}
+  argTypes={{
+    notice: {
+      control: "select",
+      description: "Modify the background color to ProgressBar",
+      options: [
+        "default",
+        "info",
+        "warning",
+        "success",
+        "error",
+      ],
+    },
+    progress: {
+      description: "The progression of the progress bar in percentage (from 0 to 100) ",
+      control: { type: 'range', min:1, max:100 },
+    },
+    className: {
+      description: "Override a component's styles",
+      control: "text",
+    },
+  }}
+  args={{
+    progress: 50,
+  }}/>
+
+# ProgressBar
+
+The ProgressBar
+
+## React Component
+
+#### Import library
+
+```
+Import {Atoms} from '@bonjour-les-pixels/component-library';
+```
+
+#### Use ProgressBar component
+
+```
+<Atoms.ProgressBar {...props}></Atoms.ProgressBar>
+```
+
+## Playground
+
+<Canvas>
+  <Story name="ProgressBar">
+    {args => {
+      return <ProgressBar {...args}  />;
+    }}
+  </Story>
+</Canvas>
+
+### Props
+
+<ArgsTable story="ProgressBar" />
+
+### Notice
+
+You can use the `notice` prop to modify the background color. This props can be declined in 5 ways. The style varies according to the level of importance of the action or the brand color in the page context.
+
+<Canvas>
+  <ProgressBar 
+    progress="50"
+  />
+</Canvas>
+
+<Canvas>
+  <ProgressBar 
+    progress="50"
+    notice="info"
+  />
+</Canvas>
+
+<Canvas>
+  <ProgressBar 
+    progress="50"
+    notice="error"
+  />
+</Canvas>
+
+<Canvas>
+  <ProgressBar 
+    progress="50"
+    notice="success"
+  />
+</Canvas>
+
+<Canvas>
+  <ProgressBar 
+    progress="50"
+    notice="warning"
+  />
+</Canvas>
+
+### ClassName
+
+You can use the `className` prop to override a component's styles using custom classes.
+
+```
+  <Alert className="OVERRIDE_STYLE_CLASSNAME" />
+```
+
+### Size
+
+You can use the size prop to modify the button size. You can set the value to `xsmal`, `small`, `default` or `medium`. 
+The default size is default and therefore doesn't need to be specified.
+
+<Canvas>
+  <ProgressBar
+      size="xsmall"
+      progress="60"
+    />
+</Canvas>
+
+<Canvas>
+  <ProgressBar
+      size="small"
+       progress="60"
+    />
+</Canvas>
+
+<Canvas>
+  <ProgressBar
+      size="default"
+       progress="60"
+    />
+</Canvas>
+
+<Canvas>
+  <ProgressBar
+      size="medium"
+       progress="60"
+    />
+</Canvas>

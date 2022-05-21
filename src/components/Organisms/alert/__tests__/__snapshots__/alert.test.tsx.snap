@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert renders correctly 1`] = `
+"<div className=\\"alert alert--notice-info override-class\\">
+  <div className=\\"alert--content-top\\">
+    <Icon icon=\\"bell\\" size=\\"sm\\" />
+    <Typography className=\\"alert--overide-typography\\" size=\\"small\\">
+      children Content
+    </Typography>
+    <div className=\\"alert--content-right\\">
+      <Button handleClick={[Function: handleClick]} iconName=\\"circle-xmark\\" />
+    </div>
+  </div>
+  <div className=\\"alert--content-bottom\\">
+    <ProgressBar progress={64} size=\\"xsmall\\" notice=\\"info\\" />
+  </div>
+</div>"
+`;

@@ -2,7 +2,7 @@
 
 exports[`Badge Should match with Snapshot correctly 1`] = `
 "<div className=\\"badge badge--notice-default overide-class\\">
-  <Typography font=\\"bold\\" size=\\"default\\" variant=\\"p\\" className=\\"badge--overide-typography\\">
+  <Typography font=\\"bold\\" size=\\"default\\" variant=\\"p\\" className=\\"badge--override-typography\\">
     Badge
   </Typography>
 </div>"

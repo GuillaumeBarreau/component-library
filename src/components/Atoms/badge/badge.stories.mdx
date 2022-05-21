@@ -5,6 +5,45 @@ import { Badge } from "./badge";
   title="Components/Atoms/Badge" 
   component={Badge}
   argTypes={{
+    children: {
+      control: "text",
+      description: "Text content",
+    },
+    className: {
+      description: "Override a component's styles",
+      control: "text",
+    },
+    notice: {
+      control: "select",
+      description: "Modify the background color :",
+      options: [
+        "default",
+        "info",
+        "warning",
+        "success",
+        "error",
+      ],
+    },
+    size: {
+      control: "select",
+      description: "Modify the size",
+      options: [
+        "xsmall",
+        "small",
+        "default",
+      ],
+    },
+    iconName: {
+      control: "select",
+      description: "Modify/selected a icon",
+      options: [
+        "coffee",
+        "bug",
+      ],
+    },
+  }}
+  args={{
+    children: 'children',
   }}/>
 
 # Badge
@@ -22,19 +61,22 @@ Import {Atoms} from '@bonjour-les-pixels/component-library';
 #### Use Badge component
 
 ```
-<Atoms.Badge> </Atoms.Badge>
+<Atoms.Badge {...props}> CHILDREN_TEXT </Atoms.Badge>
 ```
 
+## Playground
+
 <Canvas>
-  <Badge
-    children="badge"
-    notice="info"
-  />
+  <Story name="Badge">
+    {args => {
+      return <Badge {...args}  />;
+    }}
+  </Story>
 </Canvas>
 
 ### Props
 
-<ArgsTable story="." />
+<ArgsTable story="Badge" />
 
 ### Notice
 

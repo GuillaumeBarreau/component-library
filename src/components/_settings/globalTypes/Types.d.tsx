@@ -9,3 +9,14 @@ export type TiconName =
   | "bug";
 
 export type TBadgeIconName = "circle-exclamation";
+
+export type INotice =
+  | "default"
+  | "success"
+  | "info"
+  | "warning"
+  | "error"
+  | "disabled"
+  | "primary"
+  | "secondary"
+  | undefined;
