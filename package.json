@@ -1,12 +1,12 @@
 {
   "name": "@bonjour-les-pixels/component-library",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Bonjour les Pixels -- component-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "author": "Bonjour les Pixels",
   "license": "MIT",
-  "source": "./src/components/index.ts",
+  "source": "./src/components/index.tsx",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
