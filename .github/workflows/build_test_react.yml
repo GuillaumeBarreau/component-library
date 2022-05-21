@@ -35,17 +35,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Runs a set of commands using the runners shell
-      - name: npm test
+      - name: Run Jest
         run: |
-          npm ci
           npm test   
 
-      - name: Run Linter with Eslint
+      - name: Run Eslint
         run: |
-          npm ci
           npm run eslint:check  
 
-      - name: Run Linter with Prettier
+      - name: Run Prettier
         run: |
-          npm ci
           npm run Prettier:check   
