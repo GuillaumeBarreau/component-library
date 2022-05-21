@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link renders correctly 1`] = `
-"<div className=\\"Link\\">
-  Link component
-</div>"
+"<a className=\\"Link\\" href={[undefined]} target=\\"_self\\" rel=\\"\\">
+  Link
+</a>"
 `;

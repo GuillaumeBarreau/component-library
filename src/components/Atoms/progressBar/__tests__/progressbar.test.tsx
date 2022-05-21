@@ -62,7 +62,7 @@ describe("ProgressBar", () => {
     );
   });
 
-  it("Should contain defaultProps:progessMin correctly", () => {
+  it("Should contain the witdh style value at 50% correctly", () => {
     const wrapper = shallow(<ProgressBar {...defaultProps} />);
     expect(wrapper.html()).toContain("width:50%");
   });

@@ -5,7 +5,7 @@ import "./typography.css";
 
 export const Typography: React.FC<ComponentTypographyProps> = (props) => {
   const { className, font, children, size = "default", variant = "p" } = props;
-  const prefixCls: string = "typography";
+  const prefixCls = "typography";
 
   const classes = classNames(
     prefixCls,

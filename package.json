@@ -1,12 +1,12 @@
 {
   "name": "@bonjour-les-pixels/component-library",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Bonjour les Pixels -- component-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "author": "Bonjour les Pixels",
   "license": "MIT",
-  "source": "./src/components/index.ts",
+  "source": "./src/components/index.tsx",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -45,7 +45,7 @@
     "dev": "npm-run-all --parallel build-watch start-playground",
     "prettier:check": "prettier --check src/**/*.ts{,x}",
     "prettier:fix": "prettier --write src/**/*.ts{,x}",
-    "eslint:check": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "eslint:check": "eslint src/**/*.ts{,x}",
     "eslint:fix": "tsc --noEmit && eslint --fix src/**/*.ts{,x}",
     "fixAll": "npm run eslint:fix && npm run prettier:fix",
     "CPD": "npx check-peer-dependencies",
@@ -55,26 +55,6 @@
   },
   "resolutions": {
     "styled-components": "^5"
-  },
-  "eslintConfig": {
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      },
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
   },
   "browserslist": {
     "production": [
@@ -111,8 +91,8 @@
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.23",
     "@types/styled-components": "^5.1.25",
-    "@typescript-eslint/eslint-plugin": "^4.28.0",
-    "@typescript-eslint/parser": "^4.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
@@ -121,7 +101,7 @@
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react": "^7.30.0",
     "npm-run-all": "^4.1.5",
     "plop": "^3.0.5",
     "postcss-modules": "^4.1.3",

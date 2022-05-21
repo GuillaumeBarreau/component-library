@@ -1,5 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import { ComponentButtonProps } from "./button.d";
 import "./button.css";
@@ -19,7 +18,7 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
     notice = "default",
   } = props;
 
-  const iconNameSize: { [key: string]: SizeProp } = {
+  const iconNameSize: { [key: string]: SizeProp | "2x" } = {
     xsmall: "lg",
     small: "lg",
     medium: "2x",
@@ -32,7 +31,7 @@ export const Button: React.FC<ComponentButtonProps> = (props) => {
     <Icon icon={"bug"} size={"xs"} />
   ) : null;
 
-  const prefixCls: string = "button";
+  const prefixCls = "button";
 
   const classes = classNames(
     prefixCls,

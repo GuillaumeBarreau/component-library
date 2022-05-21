@@ -44,7 +44,7 @@ describe("Button", () => {
     expect(wrapper.html()).toContain("button--notice-default");
   });
 
-  it("Should contain defaultProps:Notice with following value disabled correctly", () => {
+  it("Should contain Props:Notice with following value disabled", () => {
     const wrapper = shallow(<Button {...defaultProps} notice="disabled" />);
     expect(wrapper.html()).toContain("disabled");
   });

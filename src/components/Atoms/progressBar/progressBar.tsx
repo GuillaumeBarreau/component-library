@@ -6,7 +6,7 @@ import "./progressBar.css";
 export const ProgressBar: React.FC<ComponentProgressBarProps> = (props) => {
   const { className, notice = "primary", progress, size = "default" } = props;
 
-  const prefixCls: string = "progressBar";
+  const prefixCls = "progressBar";
   const classes = classNames(
     prefixCls,
     {

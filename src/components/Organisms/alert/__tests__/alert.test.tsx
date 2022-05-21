@@ -1,16 +1,19 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { Alert } from "../alert";
-import { ComponentAlertProps } from "../alert.d";
+import { ComponentAlertProps, IProgressBarProps } from "../alert.d";
 
 describe("Alert", () => {
-  let defaultProps: JSX.IntrinsicAttributes & ComponentAlertProps;
+  let defaultProps: JSX.IntrinsicAttributes &
+    ComponentAlertProps &
+    IProgressBarProps;
 
   beforeEach(() => {
     defaultProps = {
       children: "children Content",
       className: "override-class",
       dismissible: true,
+      progressBarLabel: true,
       progressBar: 64,
       notice: "info",
     };
@@ -52,7 +55,7 @@ describe("Alert", () => {
     expect(wrapper.find(".alert--notice-warning")).toHaveLength(1);
   });
 
-  it("Should show with defaultProps:dismissible a new tag html correctly", () => {
+  it("Should contain defaultProps:dismissible a new tag html", () => {
     const wrapper = shallow(<Alert {...defaultProps} />);
     expect(wrapper.find(".alert--content-right")).toHaveLength(1);
   });
