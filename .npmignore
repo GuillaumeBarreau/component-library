@@ -1,6 +1,7 @@
 
 # .npmignore
 node_modules
+docs
 tests
 public
 .storybook
