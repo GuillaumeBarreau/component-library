@@ -7,7 +7,6 @@ import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
 import commonjs from "@rollup/plugin-commonjs";
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   input: pkg.source,
   output: [
@@ -17,11 +16,13 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    typescript(),
+    typescript({
+      exclude: ["**/__tests__", "**/*.test.ts"],
+    }),
     postcss(),
     babel({
       extensions: [".ts"],
-      exclude: "node_modules/**",
+      exclude: ["node_modules/**"],
     }),
     terser(),
     del(),
