@@ -83,6 +83,7 @@ Import {Atoms} from '@bonjour-les-pixels/component-library';
 You can use the `notice` prop to modify the badge color. This props can be declined in 5 ways. The style varies according to the level of importance of the action in the page context.
 
 <Canvas>
+  <Story name="Badge/Notice">
     <Badge
       handleClick={() => console.log("here")}
       children="Default"
@@ -103,6 +104,7 @@ You can use the `notice` prop to modify the badge color. This props can be decli
       notice="warning"
       children="warning"
     />
+  </Story>
 </Canvas>
 
 ### ClassName
@@ -120,11 +122,13 @@ You can use the `className` prop to override a component's styles using custom c
 You can use the iconName prop to have icons. You will find a list icons available below. 
 
 <Canvas>
-  <Badge
-    notice="success"
-    iconName="circle-exclamation"
-    children="button"
-  />
+  <Story name="Badge/IconName">
+    <Badge
+      notice="success"
+      iconName="circle-exclamation"
+      children="button"
+    />
+  </Story>
 </Canvas>
 
 ### Size
@@ -133,24 +137,26 @@ You can use the size prop to modify the button size. You can set the value to `x
 The default size is default and therefore doesn't need to be specified.
 
 <Canvas>
-  <Badge
-      size="xsmall"
-      children="Xsmall"
-      notice="info"
-    />
-  <Badge
-      size="small"
-      children="Small"
-      notice="info"
-    />
-  <Badge
-      size="default"
-      children="Default"
-      notice="info"
-    />
-  <Badge
-      size="medium"
-      children="Medium"
-      notice="info"
-    />
+  <Story name="Badge/Size">
+    <Badge
+        size="xsmall"
+        children="Xsmall"
+        notice="info"
+      />
+    <Badge
+        size="small"
+        children="Small"
+        notice="info"
+      />
+    <Badge
+        size="default"
+        children="Default"
+        notice="info"
+      />
+    <Badge
+        size="medium"
+        children="Medium"
+        notice="info"
+      />
+  </Story>
 </Canvas>

@@ -66,9 +66,11 @@ Import {Atoms} from '@bonjour-les-pixels/component-library';
 You can use the `notice` prop to modify the background color. This props can be declined in 5 ways. The style varies according to the level of importance of the action or the brand color in the page context.
 
 <Canvas>
-  <ProgressBar 
-    progress="50"
-  />
+  <Story name="ProgressBar/Notice">
+    <ProgressBar 
+      progress="50"
+    />
+  </Story>
 </Canvas>
 
 <Canvas>
@@ -113,10 +115,12 @@ You can use the size prop to modify the button size. You can set the value to `x
 The default size is default and therefore doesn't need to be specified.
 
 <Canvas>
-  <ProgressBar
-      size="xsmall"
-      progress="60"
-    />
+  <Story name="ProgressBar/Size">
+    <ProgressBar
+        size="xsmall"
+        progress="60"
+      />
+  </Story>
 </Canvas>
 
 <Canvas>

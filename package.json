@@ -1,6 +1,6 @@
 {
   "name": "@bonjour_les_pixels/component-library",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bonjour les Pixels -- component-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

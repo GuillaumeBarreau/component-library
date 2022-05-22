@@ -64,7 +64,8 @@ Import {Atoms} from '@bonjour-les-pixels/component-library';
 You can use the icon prop to have icons. You will find a list icons available below. 
 
 <Canvas>
-  <div>
+  <Story name="Icon/IconName">
+    <div>
       <ul
        style={{
           listStyle: 'none',
@@ -218,6 +219,7 @@ You can use the icon prop to have icons. You will find a list icons available be
         </li>
       </ul>
     </div>
+  </Story>
 </Canvas>
 
 ### Size
@@ -237,6 +239,7 @@ You can use the size prop to modify the button size. You can set the value to `x
  , `10x`.
 
 <Canvas>
+ <Story name="Icon/Size">
   <Icon
       size="xs"
       icon="circle-exclamation"
@@ -253,4 +256,5 @@ You can use the size prop to modify the button size. You can set the value to `x
       size="lg"
       icon="circle-exclamation"
     />
+  </Story>
 </Canvas>
