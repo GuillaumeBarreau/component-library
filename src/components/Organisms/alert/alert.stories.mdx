@@ -76,6 +76,7 @@ Import {Organisms} from '@bonjour-les-pixels/component-library';
 You can use the `notice` prop on a Alert to modify the background color. You can set the value to primary, success, warning, info or error. The style varies according to the level of importance of the action in the system context.
 
 <Canvas>
+  <Story name="Alert/Notice">
     <Alert
       size="medium"
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
@@ -100,6 +101,7 @@ You can use the `notice` prop on a Alert to modify the background color. You can
       size="medium"
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
+  </Story>
 </Canvas>
 
 ### ClassName
@@ -115,6 +117,7 @@ You can use the `className` prop to override a component's styles using custom c
 You can use the prop `dismissible` to display the action button to trigger a window closure.
 
 <Canvas>
+  <Story name="Alert/Dismissible">
     <Alert
       size="medium"
       dismissible
@@ -144,6 +147,7 @@ You can use the prop `dismissible` to display the action button to trigger a win
       size="medium"
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
+  </Story>
 </Canvas>
 
 ### ProgressBar
@@ -151,6 +155,7 @@ You can use the prop `dismissible` to display the action button to trigger a win
 You can use the `progressBar` props to display the progress bar time until the window is automatically closed.
 
 <Canvas>
+  <Story name="Alert/ProgressBar">
     <Alert
       size="medium"
       progressBar={10}
@@ -185,6 +190,7 @@ You can use the `progressBar` props to display the progress bar time until the w
       progressBar={75}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
+  </Story>
 </Canvas>
 
 ### ProgressBarLabel
@@ -192,6 +198,7 @@ You can use the `progressBar` props to display the progress bar time until the w
 You can use the boolean `progressBarLabel` props to display a label (example: 46%).
 
 <Canvas>
+  <Story name="Alert/ProgressBarLabel">
     <Alert
       size="medium"
       progressBar={10}
@@ -231,4 +238,5 @@ You can use the boolean `progressBarLabel` props to display a label (example: 46
       progressBar={75}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
+  </Story>
 </Canvas>

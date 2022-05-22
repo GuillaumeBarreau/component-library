@@ -2,6 +2,7 @@
 .alert {
   display: flex;
   flex-direction: column;
+  margin-top: 0.25rem;
   border: 0.125rem solid;
   border-radius: 0.25rem;
   padding: 0.25rem;
