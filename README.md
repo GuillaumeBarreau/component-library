@@ -42,18 +42,18 @@ Each element of the layout is basically classified according to its own composit
 
 There are **3 distinct levels** in Atomic Design:
 
-    * **Atoms**
-    * **Molecules**
-    * **Organisms**
+    Atoms
+    Molecules
+    Organisms
 
 ## Finding the code to other Components
 
 This Design System leverages Storybook to document all the React components and style guidelines. The Storybook documentation can be found [here](https://guillaumebarreau.github.io/component-library/). For your convenience, the Design System components have been organized into logical categories **Atoms, Molecules, Organisms** based on both form and function. 
 
-	* Go to the [bonjour_les_pixes/component-library React Storybook](https://guillaumebarreau.github.io/component-library/).
+	Go to the [bonjour_les_pixes/component-library React Storybook](https://guillaumebarreau.github.io/component-library/).
 
-	* Find the Component you need in the "Components" section.
+	Find the Component you need in the "Components" section.
 
-	* Navigate to the Docs tab. It's typically at the top of screen next to Canvas.
+	Navigate to the Docs tab. It's typically at the top of screen next to Canvas.
 
-	* Navigate down the page until you find your component variant.
+	Navigate down the page until you find your component variant.
