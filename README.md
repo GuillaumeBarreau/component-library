@@ -42,9 +42,9 @@ Each element of the layout is basically classified according to its own composit
 
 There are **3 distinct levels** in Atomic Design:
 
-**Atoms**
-**Molecules**
-**Organisms**
+    * **Atoms**
+    * **Molecules**
+    * **Organisms**
 
 ## Finding the code to other Components
 
@@ -57,5 +57,3 @@ This Design System leverages Storybook to document all the React components and 
 	* Navigate to the Docs tab. It's typically at the top of screen next to Canvas.
 
 	* Navigate down the page until you find your component variant.
-
-T	* he Show code button will toggle a code sample.
