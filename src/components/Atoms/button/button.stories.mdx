@@ -59,13 +59,13 @@ opening a Dialog, canceling an action, or performing a delete operation.
 
 #### Import library
 
-```
+```javascript
 Import {Atoms} from '@bonjour-les-pixels/component-library';
 ```
 
 #### Use Buttom component
 
-```
+```javascript
 <Atoms.Button {...props}> CHILDREN_TEXT </Atoms.Button>
 ```
 
@@ -158,7 +158,7 @@ You can use the `className` prop to override a component's styles using custom c
 You can use the `HandleClick` prop for determine what action is to be taken whenever an event is trigger.
 This prop is required.
 
-```
+```javascript
   <Button
   HandleClick={() => alert('event trigger')}
 />
@@ -186,7 +186,6 @@ You can use the iconName prop to have icons. You will find a list icons availabl
     />
   </Story>
 </Canvas>
-
 
 ### Variant
 

@@ -2,7 +2,7 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import { Alert } from "./alert";
 
 <Meta 
-  title="Components/Organisms/Alert" 
+  title="Components/Molecules/Alert" 
   component={Alert}
   argTypes={{
     notice: {
@@ -35,7 +35,7 @@ import { Alert } from "./alert";
   }}
   args={{
     children: 'children',
-    dismissible: 'true'
+    handleClick: () => null
   }}/>
 
 # Alert
@@ -48,13 +48,13 @@ The Alert component appears at the bottom-right of the page.
 #### Import library
 
 ```
-Import {Organisms} from '@bonjour-les-pixels/component-library';
+Import {Molecules} from '@bonjour-les-pixels/component-library';
 ```
 
 #### Use Buttom component
 
 ```
-<Organisms.Alert {...props}> CHILDREN_TEXT </Organisms.Alert>
+<Molecules.Alert {...props}> CHILDREN_TEXT </Molecules.Alert>
 ```
 
 ## Playground
@@ -112,39 +112,39 @@ You can use the `className` prop to override a component's styles using custom c
   <Alert className="OVERRIDE_STYLE_CLASSNAME" />
 ```
 
-### Dismissible
+### HandleClick
 
-You can use the prop `dismissible` to display the action button to trigger a window closure.
+You can use the prop `HandleClick` to display the action button to trigger a window closure.
 
 <Canvas>
-  <Story name="Alert/Dismissible">
+  <Story name="Alert/HandleClick">
     <Alert
       size="medium"
-      dismissible
+      handleClick={() => null}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="success"
-      dismissible
       size="medium"
+      handleClick={() => null}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="info"
-      dismissible
       size="medium"
+      handleClick={() => null}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="error"
-      dismissible
       size="medium"
+      handleClick={() => null}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="warning"
-      dismissible
       size="medium"
+      handleClick={() => null}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
   </Story>
@@ -159,33 +159,33 @@ You can use the `progressBar` props to display the progress bar time until the w
     <Alert
       size="medium"
       progressBar={10}
-      dismissible
+      handleClick={() => null}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="success"
-      dismissible
+      handleClick={() => null}
       size="medium"
       progressBar={75}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="info"
-      dismissible
+      handleClick={() => null}
       size="medium"
       progressBar={25}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="error"
-      dismissible
+      handleClick={() => null}
       size="medium"
       progressBar={50}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="warning"
-      dismissible
+      handleClick={() => null}
       size="medium"
       progressBar={75}
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
@@ -202,13 +202,13 @@ You can use the boolean `progressBarLabel` props to display a label (example: 46
     <Alert
       size="medium"
       progressBar={10}
-      dismissible
+      handleClick={() => null}
       progressBarLabel
       children="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ut in incidunt ea nostrum, voluptatem explicabo voluptas."
     />
     <Alert
       notice="success"
-      dismissible
+      handleClick={() => null}
       progressBarLabel
       size="medium"
       progressBar={75}
@@ -216,7 +216,7 @@ You can use the boolean `progressBarLabel` props to display a label (example: 46
     />
     <Alert
       notice="info"
-      dismissible
+      handleClick={() => null}
       progressBarLabel
       size="medium"
       progressBar={25}
@@ -224,7 +224,7 @@ You can use the boolean `progressBarLabel` props to display a label (example: 46
     />
     <Alert
       notice="error"
-      dismissible
+      handleClick={() => null}
       progressBarLabel
       size="medium"
       progressBar={50}
@@ -232,7 +232,7 @@ You can use the boolean `progressBarLabel` props to display a label (example: 46
     />
     <Alert
       notice="warning"
-      dismissible
+      handleClick={() => null}
       progressBarLabel
       size="medium"
       progressBar={75}

@@ -13,24 +13,37 @@ import { ComponentLinkProps } from "./link.d";
     children: {
       control: "text",
       description: "Children of the link.",
-    }
+    },
+    notice: {
+      control: "text",
+      description: "Define if it should change color.",
+    },
+    href: {
+      control: "text",
+      description: "Provide the href attribute for the <a> node"
+    },
   } }
   args={ {
-    children: "children",
-    className: "Override className"
+    children: "Link children",
+    className: "Override className",
+    href: "/"
   } }/>
+
+# Link
+
+Use a Link when you want the user to navigate to another page, a specific location on a page, or to download a document.
 
 ## React Component
 
 #### Import library
 
-```
+```javascript
 Import {Atoms} from '@bonjour-les-pixels/component-library';
 ```
 
 #### Use Link component
 
-```
+```javascript
 <Atoms.Link {...props}> CHILDREN_TEXT </Atoms.Link>
 ```
 
@@ -42,4 +55,55 @@ Import {Atoms} from '@bonjour-les-pixels/component-library';
       return <Link {...args}  />;
     }}
   </Story>
+</Canvas>
+
+### Props
+
+<ArgsTable story="Link" />
+
+### Notice
+
+You can use the `notice` prop to modify the style color. This props can be declined in 5 ways. The style varies according to the level of importance of the action or the brand color in the page context.
+
+<Canvas>
+    <Story name="Link/Notice">
+        <Link
+          href="/"
+          children="default link"
+        />
+        <br/>
+        <Link
+          notice="info"
+          href="/"
+          children="info link"
+        />
+        <br/>
+        <Link
+          notice="success"
+          href="/"
+          children="success link"
+        />
+        <br/>
+        <Link
+          notice="warning"
+          href="/"
+          children="warning link"
+        />
+        <br/>
+        <Link
+          notice="error"
+          href="/"
+          children="error link"
+        />
+     </Story>
+</Canvas>
+
+You can use the value `disabled` in `notice` prop when you need to keep a user from using the link component until some specific condition has been met.
+
+<Canvas>
+  <Link
+      notice="disabled"
+      href="/"
+      children="link disabled"
+    />
 </Canvas>

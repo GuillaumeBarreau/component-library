@@ -1,4 +1,65 @@
-/* link */
-.link {
+.link--notice-default {
+  color: var(--color-notice-default--text);
+}
 
+.link--notice-error {
+  color: var(--color-notice-error--default);
+}
+
+.link--notice-success {
+  color: var(--color-notice-success--default);
+}
+
+.link--notice-warning {
+  color: var(--color-notice-warning--default);
+}
+
+.link--notice-info {
+  color: var(--color-notice-info--default);
+}
+
+.link--notice-disabled {
+  color: var(--color-base-02--dark);
+  text-decoration: none;
+  cursor: not-allowed;
+}
+
+.link--notice-default:focus {
+  color: var(--color-notice-default--light);
+}
+
+.link--notice-error:focus {
+  color: var(--color-notice-error--light);
+}
+
+.link--notice-success:focus {
+  color: var(--color-notice-success--light);
+}
+
+.link--notice-warning:focus {
+  color: var(--color-notice-warning--light);
+}
+
+.link--notice-info:focus {
+  color: var(--color-notice-info--light);
+}
+
+.link--notice-default:hover {
+  color: var(--color-text--dark);
+}
+
+.link--notice-error:hover {
+  color: var(--color-notice-error--dark);
+}
+
+.link--notice-success:hover {
+  color: var(--color-notice-success--dark);
+}
+
+.link--notice-warning:hover {
+  color: var(--color-notice-warning--dark);
+}
+
+.link--notice-info:hover {
+  color: var(--color-notice-info--dark);
 }

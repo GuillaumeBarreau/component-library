@@ -8,6 +8,6 @@ export type IProgressBarProps =
 export interface ComponentAlertProps {
   children: React.ReactNode;
   className?: string;
-  dismissible?: boolean;
   notice?: INotice;
+  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

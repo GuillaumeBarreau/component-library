@@ -11,14 +11,13 @@ import { TiconName } from "components/_settings/globalTypes/Types.d";
 export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
   props
 ) => {
-  const [fadeOut, setFadeOut] = useState(false);
   const {
     children,
     className,
     notice = "default",
-    dismissible,
     progressBar,
     progressBarLabel,
+    handleClick,
   } = props;
 
   const prefixCls = "alert";
@@ -27,7 +26,6 @@ export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
     prefixCls,
     {
       [`${prefixCls}--notice-${notice}`]: notice,
-      [`${prefixCls}--status-fadeOut`]: fadeOut || progressBar === 100,
     },
     className
   );
@@ -49,14 +47,9 @@ export const Alert: React.FC<ComponentAlertProps & IProgressBarProps> = (
         <Typography className={"alert--overide-typography"} size="small">
           {children}
         </Typography>
-        {dismissible && (
+        {handleClick && (
           <div className="alert--content-right">
-            <Button
-              handleClick={() => {
-                setFadeOut(true);
-              }}
-              iconName="circle-xmark"
-            />
+            <Button handleClick={handleClick} iconName="circle-xmark" />
           </div>
         )}
       </div>

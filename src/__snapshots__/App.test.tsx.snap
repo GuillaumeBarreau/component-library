@@ -380,10 +380,6 @@ exports[`renders correctly 1`] = `
       </div>
     </section>
     <section className=\\"App-section--container\\">
-      <Button handleClick={[Function: handleClick]} notice=\\"default\\">
-        Start ProgressBar
-      </Button>
-      <br />
       <div className=\\"App-section--container__content\\">
         <ProgressBar progress={0} notice=\\"default\\" />
       </div>
@@ -439,91 +435,115 @@ exports[`renders correctly 1`] = `
     </section>
     <section className=\\"App-section--container\\">
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"default\\" dismissible={true}>
+        <Alert notice=\\"default\\" handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"success\\" dismissible={true}>
+        <Alert notice=\\"success\\" handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"error\\" dismissible={true}>
+        <Alert notice=\\"error\\" handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"warning\\" dismissible={true}>
+        <Alert notice=\\"warning\\" handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"info\\" dismissible={true}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
-        </Alert>
-      </div>
-    </section>
-    <section className=\\"App-section--container\\">
-      <Button handleClick={[Function: handleClick]} notice=\\"default\\">
-        Start ProgressBar
-      </Button>
-      <br />
-      <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"default\\" progressBar={0} dismissible={true}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
-        </Alert>
-      </div>
-      <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"success\\" progressBar={0} dismissible={true}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
-        </Alert>
-      </div>
-      <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"error\\" progressBar={0} dismissible={true}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
-        </Alert>
-      </div>
-      <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"warning\\" progressBar={0} dismissible={true}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
-        </Alert>
-      </div>
-      <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"info\\" progressBar={0} dismissible={true}>
+        <Alert notice=\\"info\\" handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
     </section>
     <section className=\\"App-section--container\\">
-      <Button handleClick={[Function: handleClick]} notice=\\"default\\">
-        Start ProgressBar
-      </Button>
-      <br />
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"default\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+        <Alert notice=\\"default\\" progressBar={4} handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"success\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+        <Alert notice=\\"success\\" progressBar={85} handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"error\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+        <Alert notice=\\"error\\" progressBar={88} handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"warning\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+        <Alert notice=\\"warning\\" progressBar={83} handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
       </div>
       <div className=\\"App-section--container__content\\">
-        <Alert notice=\\"info\\" progressBar={0} dismissible={true} progressBarLabel={true}>
+        <Alert notice=\\"info\\" progressBar={64} handleClick={[Function: handleClick]}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
         </Alert>
+      </div>
+    </section>
+    <section className=\\"App-section--container\\">
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"default\\" progressBar={0} handleClick={[Function: handleClick]} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"success\\" progressBar={0} handleClick={[Function: handleClick]} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"error\\" progressBar={0} handleClick={[Function: handleClick]} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"warning\\" progressBar={0} handleClick={[Function: handleClick]} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Alert notice=\\"info\\" progressBar={0} handleClick={[Function: handleClick]} progressBarLabel={true}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione nostrum, molestiae fugit vero consectetur?
+        </Alert>
+      </div>
+    </section>
+    <section className=\\"App-section--container\\">
+      <div className=\\"App-section--container__content\\">
+        <Link notice=\\"default\\" href=\\"/\\">
+          Lorem ipsum dolor
+        </Link>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Link notice=\\"success\\" href=\\"/\\">
+          Lorem ipsum dolor
+        </Link>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Link notice=\\"error\\" href=\\"/\\">
+          Lorem ipsum dolor
+        </Link>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Link notice=\\"warning\\" href=\\"/\\">
+          Lorem ipsum dolor
+        </Link>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Link notice=\\"info\\" href=\\"/\\">
+          Lorem ipsum dolor
+        </Link>
+      </div>
+      <div className=\\"App-section--container__content\\">
+        <Link notice=\\"disabled\\" href=\\"/\\">
+          Lorem ipsum dolor
+        </Link>
       </div>
     </section>
     <section className=\\"App-section--container\\">

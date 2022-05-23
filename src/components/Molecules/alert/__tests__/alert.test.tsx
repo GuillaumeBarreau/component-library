@@ -12,7 +12,7 @@ describe("Alert", () => {
     defaultProps = {
       children: "children Content",
       className: "override-class",
-      dismissible: true,
+      handleClick: () => null,
       progressBarLabel: true,
       progressBar: 64,
       notice: "info",
@@ -55,13 +55,20 @@ describe("Alert", () => {
     expect(wrapper.find(".alert--notice-warning")).toHaveLength(1);
   });
 
-  it("Should contain defaultProps:dismissible a new tag html", () => {
+  it("Should contain defaultProps:handleClick a new tag html", () => {
     const wrapper = shallow(<Alert {...defaultProps} />);
     expect(wrapper.find(".alert--content-right")).toHaveLength(1);
   });
 
-  it("Should not appear a new tag html with Props:dismissible", () => {
-    const wrapper = shallow(<Alert {...defaultProps} dismissible={false} />);
+  it("Should not appear a new tag html without Props:handleClick", () => {
+    const overrideDefaultProps = {
+      children: "children Content",
+      className: "override-class",
+      progressBarLabel: true,
+      progressBar: 64,
+      notice: "info",
+    };
+    const wrapper = shallow(<Alert {...overrideDefaultProps} />);
     expect(wrapper.find(".alert--content-right")).toHaveLength(0);
   });
 });

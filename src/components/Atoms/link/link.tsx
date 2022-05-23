@@ -3,32 +3,22 @@ import classNames from "classnames";
 import { ComponentLinkProps } from "./link.d";
 import "./link.css";
 
-//   children,
-//   className ,
-//   disabled={disabled}
-//   ref={forwardedRef}
-//   target={target}
-//   decorated={decorated}
-//   rel={target === '_blank' ? 'noopener noreferrer' : ''}
-//   href={disabled ? undefined : href}
-//   onClick={disabled ? undefined : onClick}
-
 export const Link: React.FC<ComponentLinkProps> = (props) => {
   const {
     children,
     className,
-    // ref,
+    notice = "default",
     target = "_self",
-    disabled = false,
     decorated = false,
     href,
+    forwardedRef,
   } = props;
 
-  const prefixCls = "Link";
+  const prefixCls = "link";
   const classes = classNames(
     prefixCls,
     {
-      [`${prefixCls}--notice-${disabled}`]: disabled,
+      [`${prefixCls}--notice-${notice}`]: notice,
       [`${prefixCls}--notice-${decorated}`]: decorated,
     },
     className
@@ -36,8 +26,9 @@ export const Link: React.FC<ComponentLinkProps> = (props) => {
 
   return (
     <a
+      ref={forwardedRef}
       className={classes}
-      href={href}
+      href={notice !== "disabled" ? href : undefined}
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : ""}
     >

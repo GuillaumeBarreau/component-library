@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import { ReactNode, Ref } from "react";
 
 export interface ComponentLinkProps {
   children: string & ReactNode;
   className?: string;
-  ref?: string;
+  notice?: "default" | "success" | "error" | "info" | "warning" | "disabled";
   target?: "_blank" | "_parent" | "_top" | "_seft";
-  disabled: boolean;
-  decorated: boolean;
+  decorated?: boolean;
   href?: string;
+  forwardedRef?: Ref<HTMLAnchorElement>;
 }

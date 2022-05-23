@@ -1,3 +1,7 @@
+import { Alert } from "./alert";
 // COMPONENT IMPORTS
 
-export {};
+export {
+  Alert,
+  // COMPONENT EXPORTS
+};

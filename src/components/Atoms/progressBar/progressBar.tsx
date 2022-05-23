@@ -19,7 +19,9 @@ export const ProgressBar: React.FC<ComponentProgressBarProps> = (props) => {
     <div className={classes}>
       <div
         className={`progressBar--content progressBar--notice-${notice}`}
-        style={{ width: `${progress}%` }}
+        style={{
+          width: `${progress}%`,
+        }}
         aria-valuenow={progress}
         aria-valuemin={0}
         aria-valuemax={100}

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link renders correctly 1`] = `
-"<a className=\\"Link\\" href={[undefined]} target=\\"_self\\" rel=\\"\\">
+"<a className=\\"link link--notice-info\\" href=\\"https://bonjoursLesPixels.com\\" target=\\"_self\\" rel=\\"\\">
   Link
 </a>"
 `;

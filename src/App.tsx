@@ -1,21 +1,45 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, MutableRefObject } from "react";
 import { Atoms, Molecules, Organisms } from "./components/";
 
 function App() {
   const [InputTextValue, setInputTextValue] = useState<string>("");
   const [userLogin, setUserLogin] = useState<boolean>(false);
-  const [running, setRunning] = useState(false);
-  const [progress, setProgress] = useState(0);
-  let interval: NodeJS.Timeout | any = undefined;
 
   const inputEventOnChange = (value: React.SetStateAction<string>) => {
     setInputTextValue(value);
   };
 
+  const randomNumber = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+
   const buttonEventClick = () => {
     setUserLogin(true);
   };
+
+  const [progress, setProgress] = useState<number>(0);
+  const interval: any = useRef(null);
+
+  useEffect(() => {
+    let val = progress;
+    interval.current = setInterval(() => {
+      val += 10;
+
+      if (val >= 100) {
+        val = 100;
+      }
+
+      setProgress(val);
+    }, 500);
+
+    return () => {
+      if (interval.current) {
+        clearInterval(interval.current);
+        interval.current = null;
+      }
+    };
+  }, [progress]);
 
   const noticesBase = ["default", "success", "error", "warning", "info"];
   const noticesBase2 = [...noticesBase, "disabled"];
@@ -28,23 +52,6 @@ function App() {
 
   const sizesBase = ["xsmall", "small", "medium"];
   const sizesBase2 = ["xsmall", "small", "default", "medium"];
-
-  useEffect(() => {
-    if (running) {
-      interval = setInterval(() => {
-        setProgress((prev) => prev + 1);
-      }, 10);
-    } else {
-      clearInterval(interval);
-    }
-  }, [running]);
-
-  useEffect(() => {
-    if (progress === 100) {
-      setRunning(false);
-      clearInterval(interval);
-    }
-  }, [progress]);
 
   const NodeLogin = (
     <>
@@ -293,25 +300,6 @@ function App() {
         </section>
 
         <section className="App-section--container">
-          {(progress === 100 && (
-            <Atoms.Button
-              handleClick={() => {
-                setRunning(false);
-                setProgress(0);
-              }}
-              notice="default"
-            >
-              Reset ProgressBar
-            </Atoms.Button>
-          )) || (
-            <Atoms.Button
-              handleClick={() => setRunning(!running)}
-              notice="default"
-            >
-              {running ? "Stop ProgressBar" : "Start ProgressBar"}
-            </Atoms.Button>
-          )}
-          <br />
           <>
             {noticesBase.map(
               (value: any): JSX.Element => (
@@ -338,10 +326,10 @@ function App() {
             {noticesBase.map(
               (value: any): JSX.Element => (
                 <div key={value} className="App-section--container__content">
-                  <Organisms.Alert notice={value}>
+                  <Molecules.Alert notice={value}>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Vel ratione nostrum, molestiae fugit vero consectetur?
-                  </Organisms.Alert>
+                  </Molecules.Alert>
                 </div>
               )
             )}
@@ -353,10 +341,10 @@ function App() {
             {noticesBase.map(
               (value: any): JSX.Element => (
                 <div key={value} className="App-section--container__content">
-                  <Organisms.Alert notice={value} dismissible>
+                  <Molecules.Alert notice={value} handleClick={() => null}>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Vel ratione nostrum, molestiae fugit vero consectetur?
-                  </Organisms.Alert>
+                  </Molecules.Alert>
                 </div>
               )
             )}
@@ -364,37 +352,18 @@ function App() {
         </section>
 
         <section className="App-section--container">
-          {(progress === 100 && (
-            <Atoms.Button
-              handleClick={() => {
-                setRunning(false);
-                setProgress(0);
-              }}
-              notice="default"
-            >
-              Reset ProgressBar
-            </Atoms.Button>
-          )) || (
-            <Atoms.Button
-              handleClick={() => setRunning(!running)}
-              notice="default"
-            >
-              {running ? "Stop ProgressBar" : "Start ProgressBar"}
-            </Atoms.Button>
-          )}
-          <br />
           <>
             {noticesBase.map(
               (value: any): JSX.Element => (
                 <div key={value} className="App-section--container__content">
-                  <Organisms.Alert
+                  <Molecules.Alert
                     notice={value}
-                    progressBar={progress}
-                    dismissible
+                    progressBar={randomNumber(1, 100)}
+                    handleClick={() => null}
                   >
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Vel ratione nostrum, molestiae fugit vero consectetur?
-                  </Organisms.Alert>
+                  </Molecules.Alert>
                 </div>
               )
             )}
@@ -402,38 +371,33 @@ function App() {
         </section>
 
         <section className="App-section--container">
-          {(progress === 100 && (
-            <Atoms.Button
-              handleClick={() => {
-                setRunning(false);
-                setProgress(0);
-              }}
-              notice="default"
-            >
-              Reset ProgressBar
-            </Atoms.Button>
-          )) || (
-            <Atoms.Button
-              handleClick={() => setRunning(!running)}
-              notice="default"
-            >
-              {running ? "Stop ProgressBar" : "Start ProgressBar"}
-            </Atoms.Button>
-          )}
-          <br />
           <>
             {noticesBase.map(
               (value: any): JSX.Element => (
                 <div key={value} className="App-section--container__content">
-                  <Organisms.Alert
+                  <Molecules.Alert
                     notice={value}
                     progressBar={progress}
-                    dismissible
+                    handleClick={() => null}
                     progressBarLabel
                   >
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Vel ratione nostrum, molestiae fugit vero consectetur?
-                  </Organisms.Alert>
+                  </Molecules.Alert>
+                </div>
+              )
+            )}
+          </>
+        </section>
+
+        <section className="App-section--container">
+          <>
+            {noticesBase2.map(
+              (value: any): JSX.Element => (
+                <div key={value} className="App-section--container__content">
+                  <Atoms.Link notice={value} href={"/"}>
+                    Lorem ipsum dolor
+                  </Atoms.Link>
                 </div>
               )
             )}
